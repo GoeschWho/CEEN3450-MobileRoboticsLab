@@ -57,7 +57,7 @@
 // Desc: This macro-function can be used to reset a motor-action structure
 //       easily.  It is a helper macro-function.
 #define __RESET_ACTION( motor_action )    \
-do {                                  \
+do {									  \
 	( motor_action ).speed_L = 0;         \
 	( motor_action ).speed_R = 0;         \
 	( motor_action ).accel_L = 0;         \
@@ -68,15 +68,18 @@ do {                                  \
 	// Desc: This macro-fuction translates action to motion -- it is a helper
 	//       macro-function.
 	#define __MOTOR_ACTION( motor_action )   \
-	do {                                 \
+	do {                                     \
 		STEPPER_set_accel2( ( motor_action ).accel_L, ( motor_action ).accel_R ); \
-		STEPPER_runn( ( motor_action ).speed_L, ( motor_action ).speed_R ); \
+		STEPPER_runn( ( motor_action ).speed_L, ( motor_action ).speed_R );       \
 		} while( 0 ) /* end __MOTOR_ACTION() */
 
 		// Desc: This macro-function is used to set the action, in a more natural
 		//       manner (as if it was a function).
 
+
+
 		// ---------------------- Type Declarations:
+
 
 		// Desc: The following custom enumerated type can be used to specify the
 		//       current state of the robot.  This parameter can be expanded upon
@@ -86,11 +89,14 @@ do {                                  \
 		typedef enum ROBOT_STATE_TYPE {
 
 			STARTUP = 0,    // 'Startup' state -- initial state upon RESET.
-			EXPLORING,      // 'Exploring' state -- the robot is 'roaming around'.
+			CRUISING,      // 'Exploring' state -- the robot is 'roaming around'.
 			AVOIDING        // 'Avoiding' state -- the robot is avoiding a collision.
 
 		} ROBOT_STATE;
 
+
+
+		
 		// Desc: Structure encapsulates a 'motor' action. It contains parameters that
 		//       controls the motors 'down the line' with information depicting the
 		//       current state of the robot.  The 'state' variable is useful to
@@ -106,6 +112,8 @@ do {                                  \
 			
 		} MOTOR_ACTION;
 
+
+		
 		// Desc: Structure encapsulates 'sensed' data.  Right now that only consists
 		//       of the state of the left & right IR sensors when queried.  You can
 		//       expand this structure and add additional custom fields as needed.
@@ -114,25 +122,33 @@ do {                                  \
 			BOOL left_IR;       // Holds the state of the left IR.
 			BOOL right_IR;      // Holds the state of the right IR.
 
-			// *** Add your -own- parameters here.
+
+			// *** Add more parameters here.
 
 		} SENSOR_DATA;
 
+
+		// ------------------------------
 		// ---------------------- Globals:
 		volatile MOTOR_ACTION action;  	// This variable holds parameters that determine
 		// the current action that is taking place.
 		// Here, a structure named "action" of type
 		// MOTOR_ACTION is declared.
 
+		// ---------------------------------
 		// ---------------------- Prototypes:
 		void IR_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms );
-		void explore( volatile MOTOR_ACTION *pAction );
+		void CRUISE( volatile MOTOR_ACTION *pAction );
 		void IR_avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
 		void act( volatile MOTOR_ACTION *pAction );
 		void info_display( volatile MOTOR_ACTION *pAction );
 		BOOL compare_actions( volatile MOTOR_ACTION *a, volatile MOTOR_ACTION *b );
 
-		// ---------------------- Convenience Functions:
+
+
+
+		// ---------------------- Convenience Functions: -----------------------------------------------------------------------------------------------------//
+		// ---------------------------------------------------------------------------------------------------------------------------------------------------//
 		void info_display( volatile MOTOR_ACTION *pAction )
 		{
 
@@ -157,9 +173,9 @@ do {                                  \
 
 					break;
 
-					case EXPLORING:
+					case CRUISING:
 
-					LCD_printf( "Exploring...\n" );
+					LCD_printf( "CRUISING...\n" );
 
 					break;
 
@@ -182,7 +198,9 @@ do {                                  \
 
 		} // end info_display()
 
-		// ----------------------------------------------------- //
+
+
+		// ------------------------------------------------------------------------------------------------------------------------------------------------ //
 		BOOL compare_actions( volatile MOTOR_ACTION *a, volatile MOTOR_ACTION *b )
 		{
 
@@ -206,7 +224,11 @@ do {                                  \
 
 		} // end compare_actions()
 
-		// ---------------------- Top-Level Behaviorals:
+
+
+		
+		// ---------------------- Top-Level Behaviorals: ----------------------------------------------------------------------------------------------------- //
+		// --------------------------------------------------------------------------------------------------------------------------------------------------- //
 		void IR_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms )
 		{
 
@@ -260,6 +282,8 @@ do {                                  \
 					pSensors->left_IR  = ATTINY_get_IR_state( ATTINY_IR_LEFT  );
 					pSensors->right_IR = ATTINY_get_IR_state( ATTINY_IR_RIGHT );
 
+					
+
 					// NOTE: You can add more stuff to 'sense' here.
 					
 					// Snooze the alarm so it can trigger again.
@@ -270,13 +294,16 @@ do {                                  \
 			} // end else.
 
 		} // end sense()
-		// -------------------------------------------- //
-		void explore( volatile MOTOR_ACTION *pAction )
+
+
+
+		// ----------------------------------------------------------------------------------------------------------------------------------------- //
+		void CRUISE( volatile MOTOR_ACTION *pAction )
 		{
 			
 			// Nothing to do, but set the parameters to explore.  'act()' will do
 			// the rest down the line.
-			pAction->state = EXPLORING;
+			pAction->state = CRUISING;
 			pAction->speed_L = 200;
 			pAction->speed_R = 200;
 			pAction->accel_L = 400;
@@ -285,7 +312,10 @@ do {                                  \
 			// That's it -- let 'act()' do the rest.
 			
 		} // end explore()
-		// -------------------------------------------- //
+
+
+
+		// ------------------------------------------------------------------------------------------------------------------------------------------ //
 		void IR_avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors )
 		{
 
@@ -306,26 +336,75 @@ do {                                  \
 				
 				// Back up...
 				STEPPER_move_stwt( STEPPER_BOTH,
-				STEPPER_REV, 150, 200, 400, STEPPER_BRK_OFF,
-				STEPPER_REV, 150, 200, 400, STEPPER_BRK_OFF );
+						STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF,
+						STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF );
 				
 				// ... and turn RIGHT ~90-deg.
 				STEPPER_move_stwt( STEPPER_BOTH,
-				STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF,
-				STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF );
+						STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF,
+						STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF );
 
 				// ... and set the motor action structure with variables to move forward.
-
 				pAction->state = AVOIDING;
 				pAction->speed_L = 200;
 				pAction->speed_R = 200;
 				pAction->accel_L = 400;
 				pAction->accel_R = 400;
 				
-			} // end if()
-			
+			} 
+			if( pSensors->right_IR == TRUE)
+			{
+				pAction->state = AVOIDING;
+
+				STEPPER_stop(STEPPER_BOTH, STEPPER_BRK_OFF);
+
+				// Back up...
+				STEPPER_move_stwt( STEPPER_BOTH,
+						STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF,
+						STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF );	
+						
+				// ... and turn LEFT ~90-deg
+				STEPPER_move_stwt( STEPPER_BOTH,
+						STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF,
+						STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF);	
+
+				// ... and set the motor action structure with variables to move forward.
+				pAction->state = AVOIDING;
+				pAction->speed_L = 200;
+				pAction->speed_R = 200;
+				pAction->accel_L = 400;
+				pAction->accel_R = 400;
+			}
+			if( pSensors->right_IR == TRUE && pSensors->left_IR == TRUE)
+			{
+				pAction->state = AVOIDING;
+
+				STEPPER_stop(STEPPER_BOTH, STEPPER_BRK_OFF);
+
+				// Back up... further
+				STEPPER_move_stwt( STEPPER_BOTH,
+						STEPPER_REV, 500, 200, 400, STEPPER_BRK_OFF,
+						STEPPER_REV, 500, 200, 400, STEPPER_BRK_OFF );
+
+				// ... and turn LEFT ~120-deg
+				STEPPER_move_stwt( STEPPER_BOTH,
+						STEPPER_REV, 175, 200, 400, STEPPER_BRK_OFF,
+						STEPPER_FWD, 175, 200, 400, STEPPER_BRK_OFF);
+
+
+				// ... and set the motor action structure with variables to move forward.
+				pAction->state = AVOIDING;
+				pAction->speed_L = 200;
+				pAction->speed_R = 200;
+				pAction->accel_L = 400;
+				pAction->accel_R = 400;
+			}
 		} // end avoid()
-		// -------------------------------------------- //
+
+
+
+
+		// --------------------------------------------------------------------------------------------------------------------------- //
 		void act( volatile MOTOR_ACTION *pAction )
 		{
 
@@ -352,7 +431,12 @@ do {                                  \
 			} // end if()
 			
 		} // end act()
-		// ---------------------- CBOT Main:
+
+
+
+
+		// ---------------------- CBOT Main ---------------------------------------------------------------------------------------------- //
+		// ------------------------------------------------------------------------------------------------------------------------------- //
 		void CBOT_main( void )
 		{
 
@@ -361,12 +445,12 @@ do {                                  \
 			// ** Open the needed modules.
 			LED_open();     // Open the LED subsystem module.
 			LCD_open();     // Open the LCD subsystem module.
-			STEPPER_open(); // Open the STEPPER subsyste module.
+			STEPPER_open(); // Open the STEPPER subsystem module.
 			
 			// Reset the current motor action.
 			__RESET_ACTION( action );
 			
-			// Nofify program is about to start.
+			// Notify program is about to start.
 			LCD_printf( "Starting...\n" );
 			
 			// Wait 3 seconds or so.
@@ -388,7 +472,7 @@ do {                                  \
 				IR_sense( &sensor_data, 125 );
 				
 				// Behaviors.
-				explore( &action );
+				CRUISE( &action );
 				
 				// Note that 'avoidance' relies on sensor data to determine
 				// whether or not 'avoidance' is necessary.
