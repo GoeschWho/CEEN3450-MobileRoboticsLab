@@ -65,6 +65,8 @@ do {									  \
 	( motor_action ).state = STARTUP;     \
 	} while( 0 ) /* end __RESET_ACTION() */
 
+
+
 	// Desc: This macro-fuction translates action to motion -- it is a helper
 	//       macro-function.
 	#define __MOTOR_ACTION( motor_action )   \
@@ -89,7 +91,7 @@ do {									  \
 		typedef enum ROBOT_STATE_TYPE {
 
 			STARTUP = 0,    // 'Startup' state -- initial state upon RESET.
-			CRUISING,      // 'Exploring' state -- the robot is 'roaming around'.
+			CRUISING,      // 'Cruising' state -- the robot is 'roaming around'.
 			AVOIDING        // 'Avoiding' state -- the robot is avoiding a collision.
 
 		} ROBOT_STATE;
@@ -139,6 +141,7 @@ do {									  \
 		// ---------------------- Prototypes:
 		void IR_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms );
 		void Cruise( volatile MOTOR_ACTION *pAction );
+		void Light_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
 		void IR_avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
 		void act( volatile MOTOR_ACTION *pAction );
 		void info_display( volatile MOTOR_ACTION *pAction );
@@ -168,25 +171,18 @@ do {									  \
 				{
 
 					case STARTUP:
-
 					// Fill me in.
-
 					break;
 
 					case CRUISING:
-
 					LCD_printf( "CRUISING...\n" );
-
 					break;
 
 					case AVOIDING:
-
 					LCD_printf( "AVOIDING...\n");
-
 					break;
 
 					// Fill me in.
-
 					break;
 
 					default:
@@ -477,6 +473,8 @@ do {									  \
 				
 				// Behaviors.
 				Cruise( &action );
+
+				Light_Follow( &action, &sensor_data );
 				
 				// Note that 'avoidance' relies on sensor data to determine
 				// whether or not 'avoidance' is necessary.
