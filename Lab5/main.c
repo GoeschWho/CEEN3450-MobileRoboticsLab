@@ -138,7 +138,7 @@ do {									  \
 		// ---------------------------------
 		// ---------------------- Prototypes:
 		void IR_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms );
-		void CRUISE( volatile MOTOR_ACTION *pAction );
+		void Cruise( volatile MOTOR_ACTION *pAction );
 		void IR_avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
 		void act( volatile MOTOR_ACTION *pAction );
 		void info_display( volatile MOTOR_ACTION *pAction );
@@ -180,6 +180,10 @@ do {									  \
 					break;
 
 					case AVOIDING:
+
+					LCD_printf( "AVOIDING...\n");
+
+					break;
 
 					// Fill me in.
 
@@ -298,7 +302,7 @@ do {									  \
 
 
 		// ----------------------------------------------------------------------------------------------------------------------------------------- //
-		void CRUISE( volatile MOTOR_ACTION *pAction )
+		void Cruise( volatile MOTOR_ACTION *pAction )
 		{
 			
 			// Nothing to do, but set the parameters to explore.  'act()' will do
@@ -472,7 +476,7 @@ do {									  \
 				IR_sense( &sensor_data, 125 );
 				
 				// Behaviors.
-				CRUISE( &action );
+				Cruise( &action );
 				
 				// Note that 'avoidance' relies on sensor data to determine
 				// whether or not 'avoidance' is necessary.
