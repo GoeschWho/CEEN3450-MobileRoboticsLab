@@ -4559,7 +4559,7 @@ Disassembly of section .text:
     2d06:	df 93       	push	r29
     2d08:	fc 01       	movw	r30, r24
     2d0a:	30 81       	ld	r19, Z
-    2d0c:	20 91 dd 01 	lds	r18, 0x01DD	; 0x8001dd <previous_state.3621>
+    2d0c:	20 91 dd 01 	lds	r18, 0x01DD	; 0x8001dd <previous_state.3622>
     2d10:	32 13       	cpse	r19, r18
     2d12:	03 c0       	rjmp	.+6      	; 0x2d1a <info_display+0x16>
     2d14:	20 81       	ld	r18, Z
@@ -4571,7 +4571,7 @@ Disassembly of section .text:
     2d22:	81 30       	cpi	r24, 0x01	; 1
     2d24:	31 f0       	breq	.+12     	; 0x2d32 <info_display+0x2e>
     2d26:	60 f0       	brcs	.+24     	; 0x2d40 <info_display+0x3c>
-    2d28:	82 30       	cpi	r24, 0x02	; 2
+    2d28:	83 30       	cpi	r24, 0x03	; 3
     2d2a:	31 f4       	brne	.+12     	; 0x2d38 <info_display+0x34>
     2d2c:	8c e2       	ldi	r24, 0x2C	; 44
     2d2e:	91 e0       	ldi	r25, 0x01	; 1
@@ -4583,7 +4583,7 @@ Disassembly of section .text:
     2d3a:	91 e0       	ldi	r25, 0x01	; 1
     2d3c:	0e 94 77 22 	call	0x44ee	; 0x44ee <puts>
     2d40:	88 81       	ld	r24, Y
-    2d42:	80 93 dd 01 	sts	0x01DD, r24	; 0x8001dd <previous_state.3621>
+    2d42:	80 93 dd 01 	sts	0x01DD, r24	; 0x8001dd <previous_state.3622>
     2d46:	df 91       	pop	r29
     2d48:	cf 91       	pop	r28
     2d4a:	08 95       	ret
@@ -4640,7 +4640,7 @@ Disassembly of section .text:
     2da8:	df 93       	push	r29
     2daa:	ec 01       	movw	r28, r24
     2dac:	9b 01       	movw	r18, r22
-    2dae:	80 91 dc 01 	lds	r24, 0x01DC	; 0x8001dc <timer_started.3636>
+    2dae:	80 91 dc 01 	lds	r24, 0x01DC	; 0x8001dc <timer_started.3637>
     2db2:	81 11       	cpse	r24, r1
     2db4:	0a c0       	rjmp	.+20     	; 0x2dca <IR_sense+0x24>
     2db6:	41 e0       	ldi	r20, 0x01	; 1
@@ -4649,9 +4649,9 @@ Disassembly of section .text:
     2dbc:	91 e0       	ldi	r25, 0x01	; 1
     2dbe:	0e 94 ee 0a 	call	0x15dc	; 0x15dc <TMRSRVC_new>
     2dc2:	81 e0       	ldi	r24, 0x01	; 1
-    2dc4:	80 93 dc 01 	sts	0x01DC, r24	; 0x8001dc <timer_started.3636>
+    2dc4:	80 93 dc 01 	sts	0x01DC, r24	; 0x8001dc <timer_started.3637>
     2dc8:	11 c0       	rjmp	.+34     	; 0x2dec <IR_sense+0x46>
-    2dca:	80 91 d9 01 	lds	r24, 0x01D9	; 0x8001d9 <sense_timer.3637+0x6>
+    2dca:	80 91 d9 01 	lds	r24, 0x01D9	; 0x8001d9 <sense_timer.3638+0x6>
     2dce:	88 23       	and	r24, r24
     2dd0:	69 f0       	breq	.+26     	; 0x2dec <IR_sense+0x46>
     2dd2:	80 e4       	ldi	r24, 0x40	; 64
@@ -4662,7 +4662,7 @@ Disassembly of section .text:
     2de0:	81 e0       	ldi	r24, 0x01	; 1
     2de2:	0e 94 eb 09 	call	0x13d6	; 0x13d6 <ATTINY_get_IR_state>
     2de6:	89 83       	std	Y+1, r24	; 0x01
-    2de8:	10 92 d9 01 	sts	0x01D9, r1	; 0x8001d9 <sense_timer.3637+0x6>
+    2de8:	10 92 d9 01 	sts	0x01D9, r1	; 0x8001d9 <sense_timer.3638+0x6>
     2dec:	df 91       	pop	r29
     2dee:	cf 91       	pop	r28
     2df0:	08 95       	ret
@@ -4709,7 +4709,7 @@ Disassembly of section .text:
     2e3a:	f1 e0       	ldi	r31, 0x01	; 1
     2e3c:	df 12       	cpse	r13, r31
     2e3e:	4d c0       	rjmp	.+154    	; 0x2eda <IR_avoid+0xc8>
-    2e40:	e2 e0       	ldi	r30, 0x02	; 2
+    2e40:	e3 e0       	ldi	r30, 0x03	; 3
     2e42:	9e 2e       	mov	r9, r30
     2e44:	98 82       	st	Y, r9
     2e46:	60 e0       	ldi	r22, 0x00	; 0
@@ -4754,9 +4754,9 @@ Disassembly of section .text:
     2e98:	1f 92       	push	r1
     2e9a:	5f 92       	push	r5
     2e9c:	1f 92       	push	r1
-    2e9e:	86 e9       	ldi	r24, 0x96	; 150
+    2e9e:	87 e8       	ldi	r24, 0x87	; 135
     2ea0:	8f 93       	push	r24
-    2ea2:	26 e9       	ldi	r18, 0x96	; 150
+    2ea2:	27 e8       	ldi	r18, 0x87	; 135
     2ea4:	30 e0       	ldi	r19, 0x00	; 0
     2ea6:	40 e0       	ldi	r20, 0x00	; 0
     2ea8:	62 e0       	ldi	r22, 0x02	; 2
@@ -4788,7 +4788,7 @@ Disassembly of section .text:
     2ede:	f1 e0       	ldi	r31, 0x01	; 1
     2ee0:	df 12       	cpse	r13, r31
     2ee2:	4e c0       	rjmp	.+156    	; 0x2f80 <IR_avoid+0x16e>
-    2ee4:	42 e0       	ldi	r20, 0x02	; 2
+    2ee4:	43 e0       	ldi	r20, 0x03	; 3
     2ee6:	94 2e       	mov	r9, r20
     2ee8:	98 82       	st	Y, r9
     2eea:	60 e0       	ldi	r22, 0x00	; 0
@@ -4833,10 +4833,10 @@ Disassembly of section .text:
     2f3c:	1f 92       	push	r1
     2f3e:	5f 92       	push	r5
     2f40:	1f 92       	push	r1
-    2f42:	86 e9       	ldi	r24, 0x96	; 150
+    2f42:	87 e8       	ldi	r24, 0x87	; 135
     2f44:	8f 93       	push	r24
     2f46:	81 2c       	mov	r8, r1
-    2f48:	26 e9       	ldi	r18, 0x96	; 150
+    2f48:	27 e8       	ldi	r18, 0x87	; 135
     2f4a:	30 e0       	ldi	r19, 0x00	; 0
     2f4c:	41 e0       	ldi	r20, 0x01	; 1
     2f4e:	62 e0       	ldi	r22, 0x02	; 2
@@ -4872,7 +4872,7 @@ Disassembly of section .text:
     2f8c:	f1 e0       	ldi	r31, 0x01	; 1
     2f8e:	df 12       	cpse	r13, r31
     2f90:	4e c0       	rjmp	.+156    	; 0x302e <IR_avoid+0x21c>
-    2f92:	82 e0       	ldi	r24, 0x02	; 2
+    2f92:	83 e0       	ldi	r24, 0x03	; 3
     2f94:	78 2e       	mov	r7, r24
     2f96:	78 82       	st	Y, r7
     2f98:	60 e0       	ldi	r22, 0x00	; 0

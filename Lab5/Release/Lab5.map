@@ -300,6 +300,14 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
+ .text.Photo_sense
+                0x00000000       0x1e main.o
+ .text.Light_follow
+                0x00000000        0x2 main.o
+ .bss.sense_timer.3644
+                0x00000000        0x9 main.o
+ .bss.timer_started.3643
+                0x00000000        0x1 main.o
  .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_main.o)
  .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_main.o)
  .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_clear.o)
@@ -1347,13 +1355,13 @@ END GROUP
  .bss           0x008001c5        0x1 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_run_mode.o)
  .bss           0x008001c6        0x4 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_pwm.o)
  *(.bss*)
- .bss.previous_action.3648
+ .bss.previous_action.3659
                 0x008001ca        0x9 main.o
- .bss.sense_timer.3637
+ .bss.sense_timer.3638
                 0x008001d3        0x9 main.o
- .bss.timer_started.3636
+ .bss.timer_started.3637
                 0x008001dc        0x1 main.o
- .bss.previous_state.3621
+ .bss.previous_state.3622
                 0x008001dd        0x1 main.o
  *(COMMON)
  COMMON         0x008001de        0x9 main.o

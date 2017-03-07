@@ -51,7 +51,7 @@
 
 // ---------------------- Defines:
 
-#define DEG_90  150     /* Number of steps for a 90-degree (in place) turn. */
+#define DEG_90  135     /* Number of steps for a 90-degree (in place) turn. */
 
 
 // Desc: This macro-function can be used to reset a motor-action structure
@@ -91,7 +91,8 @@ do {									  \
 		typedef enum ROBOT_STATE_TYPE {
 
 			STARTUP = 0,    // 'Startup' state -- initial state upon RESET.
-			CRUISING,      // 'Cruising' state -- the robot is 'roaming around'.
+			CRUISING,       // 'Cruising' state -- the robot is 'roaming around'.
+			HOMING,		    // 'Homing' state -- the robot is 'homing towards the light'.
 			AVOIDING        // 'Avoiding' state -- the robot is avoiding a collision.
 
 		} ROBOT_STATE;
@@ -124,6 +125,9 @@ do {									  \
 			BOOL left_IR;       // Holds the state of the left IR.
 			BOOL right_IR;      // Holds the state of the right IR.
 
+			int left_photo;		// Hold the value of the right photo-sensor
+			int right_photo;	// Holds the value of the right photo-sensor
+
 
 			// *** Add more parameters here.
 
@@ -141,7 +145,7 @@ do {									  \
 		// ---------------------- Prototypes:
 		void IR_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms );
 		void Cruise( volatile MOTOR_ACTION *pAction );
-		void Light_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
+		//void Light_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
 		void IR_avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
 		void act( volatile MOTOR_ACTION *pAction );
 		void info_display( volatile MOTOR_ACTION *pAction );
@@ -171,7 +175,7 @@ do {									  \
 				{
 
 					case STARTUP:
-					// Fill me in.
+					LCD_printf( "STARTING...\n");
 					break;
 
 					case CRUISING:
@@ -182,11 +186,11 @@ do {									  \
 					LCD_printf( "AVOIDING...\n");
 					break;
 
-					// Fill me in.
+					case HOMING:
+					LCD_printf( "HOMING...\n");
 					break;
 
 					default:
-
 					LCD_printf( "Unknown state!\n" );
 
 				} // end switch()
@@ -297,6 +301,35 @@ do {									  \
 
 
 
+
+		// ----------------------------------------------------------------------------------------------------------------------------------------- //
+		void Photo_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms )
+		{
+			static BOOL timer_started = FALSE;   //  Check if photo-sense is already running
+
+			static TIMEROBJ sense_timer;         // Used to control the pace at which sensor data is gathered
+
+			if( timer_started == FALSE )		// If this is first time sense() runs, start the photo-sense timer.  This happens only once!!!
+			{
+				TMRSRVC_new( &sense_timer, TMRFLG_NOTIFY_FLAG, TMRTCM_RESTART, interval_ms);	// Start the photo-sense timer, adjusted to tick every 'interval_ms'
+
+				timer_started = TRUE;			// Mark that timer is started
+			}
+			else
+			{
+				if( TIMER_ALARM( sense_timer ) )
+				{
+					LED_toggle( LED_Red );		// for debugging, to make sure photo-sensing is occuring
+
+
+				}
+			}
+
+		}
+
+
+
+
 		// ----------------------------------------------------------------------------------------------------------------------------------------- //
 		void Cruise( volatile MOTOR_ACTION *pAction )
 		{
@@ -403,6 +436,12 @@ do {									  \
 
 
 
+		// --------------------------------------------------------------------------------------------------------------------------- //
+		void Light_follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors )
+		{
+			
+		}
+
 
 		// --------------------------------------------------------------------------------------------------------------------------- //
 		void act( volatile MOTOR_ACTION *pAction )
@@ -432,7 +471,7 @@ do {									  \
 			
 		} // end act()
 
-
+		
 
 
 		// ---------------------- CBOT Main ---------------------------------------------------------------------------------------------- //
@@ -474,7 +513,7 @@ do {									  \
 				// Behaviors.
 				Cruise( &action );
 
-				Light_Follow( &action, &sensor_data );
+				//Light_Follow( &action, &sensor_data );
 				
 				// Note that 'avoidance' relies on sensor data to determine
 				// whether or not 'avoidance' is necessary.
