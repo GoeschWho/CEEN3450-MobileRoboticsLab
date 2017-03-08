@@ -125,11 +125,11 @@ do {									  \
 			BOOL left_IR;       // Holds the state of the left IR.
 			BOOL right_IR;      // Holds the state of the right IR.
 
-			float left_photo_voltage;		// Hold the value of the right photo-sensor
+			float left_photo_voltage;	// Holds the value of the left photo-sensor
 			float right_photo_voltage;	// Holds the value of the right photo-sensor
-
-
-			// *** Add more parameters here.
+			
+			float left_photo_ambient;	// Holds the initial ambient value of the right photo-sensor
+			float right_photo_ambient;	// Holds the initial ambient value of the left photo-sensor
 
 		} SENSOR_DATA;
 
@@ -299,9 +299,6 @@ do {									  \
 
 		} // end sense()
 
-
-
-
 		// ----------------------------------------------------------------------------------------------------------------------------------------- //
 		void Photo_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms )
 		{
@@ -332,19 +329,28 @@ do {									  \
 
 					// Snooze the alarm so it can trigger again.
 					TIMER_SNOOZE( sense_timer );
-
 				}
 			}
+		}  // end Photo_sense()
 
-		}
+		// ----------------------------------------------------------------------------------------------------------------------------------------- //
+		void Photo_init( volatile SENSOR_DATA *pSensors )
+		{
+			LED_toggle( LED_Red );		// for debugging, to make sure photo-sensing is occurring
+			ADC_SAMPLE sample;
 
+			ADC_set_channel(ADC_CHAN3);
+			sample = ADC_sample();
+			pSensors->left_photo_ambient = ((sample * 5.0f) / 1024);
 
-
+			ADC_set_channel(ADC_CHAN4);
+			sample = ADC_sample();
+			pSensors->right_photo_ambient = ((sample * 5.0f) / 1024);
+		} // end Photo_init()
 
 		// ----------------------------------------------------------------------------------------------------------------------------------------- //
 		void Cruise( volatile MOTOR_ACTION *pAction )
 		{
-			
 			// Nothing to do, but set the parameters to explore.  'act()' will do
 			// the rest down the line.
 			pAction->state = CRUISING;
@@ -355,9 +361,7 @@ do {									  \
 			
 			// That's it -- let 'act()' do the rest.
 			
-		} // end explore()
-
-
+		} // end Cruise()
 
 		// ------------------------------------------------------------------------------------------------------------------------------------------ //
 		void IR_avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors )
@@ -366,14 +370,14 @@ do {									  \
 			// NOTE: Here we have NO CHOICE, but to do this 'ballistically'.
 			//       **NOTHING** else can happen while we're 'avoiding'.
 			
-			// Example of ONE case (you can expand on this idea):
-			
 			// If the LEFT sensor tripped...
 			if( pSensors->left_IR == TRUE )
 			{
 
 				// Note that we're avoiding...
 				pAction->state = AVOIDING;
+				LCD_clear();
+				LCD_printf( "AVOIDING...\n");
 
 				// STOP!
 				STEPPER_stop( STEPPER_BOTH, STEPPER_BRK_OFF );
@@ -399,6 +403,8 @@ do {									  \
 			if( pSensors->right_IR == TRUE)
 			{
 				pAction->state = AVOIDING;
+				LCD_clear();
+				LCD_printf( "AVOIDING...\n");
 
 				STEPPER_stop(STEPPER_BOTH, STEPPER_BRK_OFF);
 
@@ -422,6 +428,8 @@ do {									  \
 			if( pSensors->right_IR == TRUE && pSensors->left_IR == TRUE)
 			{
 				pAction->state = AVOIDING;
+				LCD_clear();
+				LCD_printf( "AVOIDING...\n");
 
 				STEPPER_stop(STEPPER_BOTH, STEPPER_BRK_OFF);
 
@@ -443,28 +451,32 @@ do {									  \
 				pAction->accel_L = 400;
 				pAction->accel_R = 400;
 
-				
 			}
 		} // end avoid()
-
-
 
 		// --------------------------------------------------------------------------------------------------------------------------- //
 		void Light_Follow(volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors)
 		{
-			float light_min = 1.5;
-			float home_gain = 50;
+			float light_min = (( 5 - (pSensors->left_photo_ambient + pSensors->right_photo_ambient)/2 ) * 0.2 )  
+								+ ((pSensors->left_photo_ambient + pSensors->right_photo_ambient)/2);
+			float base_speed = 200;
 
-			float right_minus_left = pSensors->right_photo_voltage - pSensors->left_photo_voltage;
-
+			float adjusted_left = pSensors->left_photo_voltage - pSensors->left_photo_ambient;
+			float adjusted_right = pSensors->right_photo_voltage - pSensors->right_photo_ambient;
+			
+			float percentage_left = adjusted_left / ( 5 - pSensors->left_photo_ambient);
+			float percentage_right = adjusted_right / ( 5 - pSensors->right_photo_ambient);
+			
+			float right_minus_left = percentage_right - percentage_left;
+			
 			if ( (pSensors->left_photo_voltage + pSensors->right_photo_voltage)/2 > light_min)
 			{
 				pAction->state = HOMING;
 
-				pAction->accel_L = (pAction->accel_L + home_gain)*(right_minus_left);
-				pAction->accel_R = (pAction->accel_R - home_gain)*(right_minus_left);
-				pAction->accel_L = 400;
-				pAction->accel_R = 400;
+				//pAction->accel_L = (pAction->accel_L + home_gain)*(right_minus_left);
+				//pAction->accel_R = (pAction->accel_R - home_gain)*(right_minus_left);
+				pAction->speed_L = base_speed*( 1 + right_minus_left );
+				pAction->speed_R = base_speed*( 1 - right_minus_left );
 			}
 		}
 
@@ -496,9 +508,6 @@ do {									  \
 			
 		} // end act()
 
-		
-
-
 		// ---------------------- CBOT Main ---------------------------------------------------------------------------------------------- //
 		// ------------------------------------------------------------------------------------------------------------------------------- //
 		void CBOT_main( void )
@@ -522,6 +531,9 @@ do {									  \
 			// Wait 3 seconds or so.
 			TMRSRVC_delay( TMR_SECS( 3 ) );
 			
+			// Take initial ambient light sensor readings
+			Photo_init( &sensor_data );
+			
 			// Clear the screen and enter the arbitration loop.
 			LCD_clear();
 			
@@ -532,20 +544,14 @@ do {									  \
 			// regarding motor action (or any action)).
 			while( 1 )
 			{
-				
 				// Sense must always happen first.
 				// (IR sense happens every 125ms).
 				IR_sense( &sensor_data, 125 );
-
 				Photo_sense( &sensor_data, 250 );
 				
 				// Behaviors.
 				Cruise( &action );
-
 				Light_Follow( &action, &sensor_data );
-				
-				// Note that 'avoidance' relies on sensor data to determine
-				// whether or not 'avoidance' is necessary.
 				IR_avoid( &action, &sensor_data );
 				
 				// Perform the action of highest priority.
