@@ -367,7 +367,7 @@ do {									  \
 			//       **NOTHING** else can happen while we're 'avoiding'.
 			
 			// Example of ONE case (you can expand on this idea):
-			LCD_printf( "AVOIDING...\n");
+			
 			// If the LEFT sensor tripped...
 			if( pSensors->left_IR == TRUE )
 			{
@@ -443,7 +443,7 @@ do {									  \
 				pAction->accel_L = 400;
 				pAction->accel_R = 400;
 
-				LCD_clear();
+				
 			}
 		} // end avoid()
 
@@ -453,7 +453,7 @@ do {									  \
 		void Light_Follow(volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors)
 		{
 			float light_min = 1.5;
-			float home_gain = 5;
+			float home_gain = 50;
 
 			float right_minus_left = pSensors->right_photo_voltage - pSensors->left_photo_voltage;
 
