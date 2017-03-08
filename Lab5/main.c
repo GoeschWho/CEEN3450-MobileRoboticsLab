@@ -125,8 +125,8 @@ do {									  \
 			BOOL left_IR;       // Holds the state of the left IR.
 			BOOL right_IR;      // Holds the state of the right IR.
 
-			int left_photo;		// Hold the value of the right photo-sensor
-			int right_photo;	// Holds the value of the right photo-sensor
+			float left_photo_voltage;		// Hold the value of the right photo-sensor
+			float right_photo_voltage;	// Holds the value of the right photo-sensor
 
 
 			// *** Add more parameters here.
@@ -145,7 +145,7 @@ do {									  \
 		// ---------------------- Prototypes:
 		void IR_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms );
 		void Cruise( volatile MOTOR_ACTION *pAction );
-		//void Light_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
+		void Light_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
 		void IR_avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
 		void act( volatile MOTOR_ACTION *pAction );
 		void info_display( volatile MOTOR_ACTION *pAction );
@@ -319,8 +319,19 @@ do {									  \
 			{
 				if( TIMER_ALARM( sense_timer ) )
 				{
-					LED_toggle( LED_Red );		// for debugging, to make sure photo-sensing is occuring
+					LED_toggle( LED_Red );		// for debugging, to make sure photo-sensing is occurring
+					ADC_SAMPLE sample;
 
+					ADC_set_channel(ADC_CHAN3);
+					sample = ADC_sample();
+					pSensors->left_photo_voltage = ((sample * 5.0f) / 1024);
+
+					ADC_set_channel(ADC_CHAN4);
+					sample = ADC_sample();
+					pSensors->right_photo_voltage = ((sample * 5.0f) / 1024);
+
+					// Snooze the alarm so it can trigger again.
+					TIMER_SNOOZE( sense_timer );
 
 				}
 			}
@@ -437,11 +448,23 @@ do {									  \
 
 
 		// --------------------------------------------------------------------------------------------------------------------------- //
-		void Light_follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors )
+		void Light_Follow(volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors)
 		{
-			
-		}
+			float light_min = 1.5;
+			float home_gain = 0.5;
 
+			float right_minus_left = pSensors->right_photo_voltage - pSensors->left_photo_voltage;
+
+			if ( (pSensors->left_photo_voltage + pSensors->right_photo_voltage)/2 > light_min)
+			{
+				pAction->state = HOMING;
+
+				pAction->accel_L = (50 + home_gain)*(right_minus_left);
+				pAction->accel_R = (50 - home_gain)*(right_minus_left);
+				pAction->accel_L = 400;
+				pAction->accel_R = 400;
+			}
+		}
 
 		// --------------------------------------------------------------------------------------------------------------------------- //
 		void act( volatile MOTOR_ACTION *pAction )
@@ -485,6 +508,8 @@ do {									  \
 			LED_open();     // Open the LED subsystem module.
 			LCD_open();     // Open the LCD subsystem module.
 			STEPPER_open(); // Open the STEPPER subsystem module.
+			ADC_open();
+			ADC_set_VREF(ADC_VREF_AVCC);	// set ADC reference to 5V
 			
 			// Reset the current motor action.
 			__RESET_ACTION( action );
@@ -509,11 +534,13 @@ do {									  \
 				// Sense must always happen first.
 				// (IR sense happens every 125ms).
 				IR_sense( &sensor_data, 125 );
+
+				Photo_sense( &sensor_data, 250 );
 				
 				// Behaviors.
 				Cruise( &action );
 
-				//Light_Follow( &action, &sensor_data );
+				Light_Follow( &action, &sensor_data );
 				
 				// Note that 'avoidance' relies on sensor data to determine
 				// whether or not 'avoidance' is necessary.
