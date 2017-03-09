@@ -464,6 +464,14 @@ do {									  \
 			float adjusted_left = pSensors->left_photo_voltage - pSensors->left_photo_ambient;
 			float adjusted_right = pSensors->right_photo_voltage - pSensors->right_photo_ambient;
 			
+			// minimum adjusted value is 0
+			if ( adjusted_right < 0 ) {
+				adjusted_right = 0;
+			}
+			if ( adjusted_left < 0 ) {
+				adjusted_left = 0;
+			}
+			
 			float percentage_left = adjusted_left / ( 5 - pSensors->left_photo_ambient);
 			float percentage_right = adjusted_right / ( 5 - pSensors->right_photo_ambient);
 			
@@ -473,8 +481,6 @@ do {									  \
 			{
 				pAction->state = HOMING;
 
-				//pAction->accel_L = (pAction->accel_L + home_gain)*(right_minus_left);
-				//pAction->accel_R = (pAction->accel_R - home_gain)*(right_minus_left);
 				pAction->speed_L = base_speed*( 1 + right_minus_left );
 				pAction->speed_R = base_speed*( 1 - right_minus_left );
 			}
