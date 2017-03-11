@@ -473,8 +473,6 @@ do {									  \
 			{
 				pAction->state = HOMING;
 
-				//pAction->accel_L = (pAction->accel_L + home_gain)*(right_minus_left);
-				//pAction->accel_R = (pAction->accel_R - home_gain)*(right_minus_left);
 				pAction->speed_L = base_speed*( 1 + right_minus_left );
 				pAction->speed_R = base_speed*( 1 - right_minus_left );
 			}

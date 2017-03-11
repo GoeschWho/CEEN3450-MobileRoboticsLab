@@ -66,8 +66,7 @@ ADDITIONAL_DEPENDENCIES:=
 
 OUTPUT_FILE_DEP:= ./makedep.mk
 
-LIB_DEP+=  \
-C:/Users/megan/Google\ Drive/College/S6\ -\ Spring\ 2017/Mobile\ Robotics/Lab/Library/libcapi324v221.a
+LIB_DEP+= 
 
 LINKER_SCRIPT_DEP+= 
 

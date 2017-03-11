@@ -1,209 +1,209 @@
 Archive member included to satisfy reference by file (symbol)
 
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_open.o)
+../../../../../CEENBoT Files\libcapi324v221.a(ADC_open.o)
                               main.o (ADC_open)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_sample.o)
+../../../../../CEENBoT Files\libcapi324v221.a(ADC_sample.o)
                               main.o (ADC_sample)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_set_VREF.o)
+../../../../../CEENBoT Files\libcapi324v221.a(ADC_set_VREF.o)
                               main.o (ADC_set_VREF)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_set_channel.o)
+../../../../../CEENBoT Files\libcapi324v221.a(ADC_set_channel.o)
                               main.o (ADC_set_channel)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ADC_init.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_open.o) (__ADC_init)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_main.o)
+../../../../../CEENBoT Files\libcapi324v221.a(__ADC_init.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(ADC_open.o) (__ADC_init)
+../../../../../CEENBoT Files\libcapi324v221.a(CBOT_main.o)
                               C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega324p/avr5/crtatmega324p.o (main)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_clear.o)
+../../../../../CEENBoT Files\libcapi324v221.a(LCD_clear.o)
                               main.o (LCD_clear)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_open.o)
+../../../../../CEENBoT Files\libcapi324v221.a(LCD_open.o)
                               main.o (LCD_open)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_PGC_addr.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_clear.o) (LCD_set_PGC_addr)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_backlight.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_open.o) (LCD_set_backlight)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_next_PGC.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_clear.o) (LCD_set_next_PGC)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_write.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_clear.o) (LCD_write)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LCD_init.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_open.o) (__LCD_init)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_open.o)
+../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_PGC_addr.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LCD_clear.o) (LCD_set_PGC_addr)
+../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_backlight.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LCD_open.o) (LCD_set_backlight)
+../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_next_PGC.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LCD_clear.o) (LCD_set_next_PGC)
+../../../../../CEENBoT Files\libcapi324v221.a(LCD_write.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LCD_clear.o) (LCD_write)
+../../../../../CEENBoT Files\libcapi324v221.a(__LCD_init.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LCD_open.o) (__LCD_init)
+../../../../../CEENBoT Files\libcapi324v221.a(LED_open.o)
                               main.o (LED_open)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_tog_pattern.o)
+../../../../../CEENBoT Files\libcapi324v221.a(LED_tog_pattern.o)
                               main.o (LED_tog_pattern)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LED_init.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_open.o) (__LED_init)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LED_tog_pattern.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_tog_pattern.o) (__LED_tog_pattern)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_open.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_open.o) (SPI_open)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_set_config_func.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_open.o) (SPI_set_config_func)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_set_slave_addr.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_backlight.o) (SPI_set_slave_addr)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_transmit.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_backlight.o) (SPI_transmit)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPI_init.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_open.o) (__SPI_init)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_move.o)
+../../../../../CEENBoT Files\libcapi324v221.a(__LED_init.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LED_open.o) (__LED_init)
+../../../../../CEENBoT Files\libcapi324v221.a(__LED_tog_pattern.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LED_tog_pattern.o) (__LED_tog_pattern)
+../../../../../CEENBoT Files\libcapi324v221.a(SPI_open.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LCD_open.o) (SPI_open)
+../../../../../CEENBoT Files\libcapi324v221.a(SPI_set_config_func.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPI_open.o) (SPI_set_config_func)
+../../../../../CEENBoT Files\libcapi324v221.a(SPI_set_slave_addr.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_backlight.o) (SPI_set_slave_addr)
+../../../../../CEENBoT Files\libcapi324v221.a(SPI_transmit.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_backlight.o) (SPI_transmit)
+../../../../../CEENBoT Files\libcapi324v221.a(__SPI_init.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPI_open.o) (__SPI_init)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_move.o)
                               main.o (STEPPER_move)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_open.o)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_open.o)
                               main.o (STEPPER_open)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_run.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_move.o) (STEPPER_run)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_run2.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_move.o) (STEPPER_run2)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_runn.o)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_run.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_move.o) (STEPPER_run)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_run2.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_move.o) (STEPPER_run2)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_runn.o)
                               main.o (STEPPER_runn)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_accel.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_move.o) (STEPPER_set_accel)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_accel2.o)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_accel.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_move.o) (STEPPER_set_accel)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_accel2.o)
                               main.o (STEPPER_set_accel2)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_dir.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_run.o) (STEPPER_set_dir)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_dir2.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_run2.o) (STEPPER_set_dir2)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_mode.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_run.o) (STEPPER_set_mode)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_speed.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_run.o) (STEPPER_set_speed)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_speed2.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_run2.o) (STEPPER_set_speed2)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_step.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_move.o) (STEPPER_step)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_step2.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_move.o) (STEPPER_step2)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_stop.o)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_dir.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_run.o) (STEPPER_set_dir)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_dir2.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_run2.o) (STEPPER_set_dir2)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_mode.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_run.o) (STEPPER_set_mode)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_speed.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_run.o) (STEPPER_set_speed)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_speed2.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_run2.o) (STEPPER_set_speed2)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_step.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_move.o) (STEPPER_step)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_step2.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_move.o) (STEPPER_step2)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_stop.o)
                               main.o (STEPPER_stop)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_wait_and_then.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_move.o) (STEPPER_wait_and_then)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__STEPPER_init.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_open.o) (__STEPPER_init)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_decrement_refcount.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_open.o) (SYS_decrement_refcount)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_globals.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_decrement_refcount.o) (CBOT_SYSTEM_refcount)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_increment_refcount.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_open.o) (SYS_increment_refcount)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_isOpen.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_sample.o) (SYS_isOpen)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_IR_state.o)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_wait_and_then.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_move.o) (STEPPER_wait_and_then)
+../../../../../CEENBoT Files\libcapi324v221.a(__STEPPER_init.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_open.o) (__STEPPER_init)
+../../../../../CEENBoT Files\libcapi324v221.a(SYS_decrement_refcount.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LCD_open.o) (SYS_decrement_refcount)
+../../../../../CEENBoT Files\libcapi324v221.a(SYS_globals.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SYS_decrement_refcount.o) (CBOT_SYSTEM_refcount)
+../../../../../CEENBoT Files\libcapi324v221.a(SYS_increment_refcount.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(ADC_open.o) (SYS_increment_refcount)
+../../../../../CEENBoT Files\libcapi324v221.a(SYS_isOpen.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(ADC_sample.o) (SYS_isOpen)
+../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_IR_state.o)
                               main.o (ATTINY_get_IR_state)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_sensors.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_IR_state.o) (ATTINY_get_sensors)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_open.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_open.o) (ATTINY_open)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ATTINY_initialize_params.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_open.o) (__ATTINY_initialize_params)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_delay.o)
+../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_sensors.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_IR_state.o) (ATTINY_get_sensors)
+../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_open.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LCD_open.o) (ATTINY_open)
+../../../../../CEENBoT Files\libcapi324v221.a(__ATTINY_initialize_params.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_open.o) (__ATTINY_initialize_params)
+../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_delay.o)
                               main.o (TMRSRVC_delay)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_new.o)
+../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_new.o)
                               main.o (TMRSRVC_new)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__TMRSRVC_insert.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_new.o) (TMRSRVC_insert)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_init.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_main.o) (CBOT_init)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_isr.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_main.o) (CBOT_ISR_init)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR_globals.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_isr.o) (CBOT_ISR_vtable)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR_open.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_init.o) (ISR_open)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_globals.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_open.o) (LCD_stdout)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LCD_putchar.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_globals.o) (__LCD_putchar)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_clr_pattern.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LED_init.o) (LED_clr_pattern)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LED_clr_pattern.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_clr_pattern.o) (__LED_clr_pattern)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATMEGA_open.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_init.o) (ATMEGA_open)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATMEGA_set_clk_mode.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATMEGA_open.o) (ATMEGA_set_clk_mode)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ATMEGA_init.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATMEGA_open.o) (__ATMEGA_init)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_cfgrs.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_open.o) (SPI_FLASH_config)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_globals.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_set_config_func.o) (spi_config_func_LUT)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_receive.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_sensors.o) (SPI_receive)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_close.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LCD_putchar.o) (SPKR_close)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_globals.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_close.o) (tone_mode_active)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_open.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LCD_putchar.o) (SPKR_open)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_play_beep.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LCD_putchar.o) (SPKR_play_beep)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPKR_close.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_close.o) (__SPKR_close)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPKR_init.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_open.o) (__SPKR_init)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPKR_stop.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_close.o) (__SPKR_stop)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_globals.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_open.o) (STEPPER_params)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_go.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_step.o) (STEPPER_go)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_steps.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_step.o) (STEPPER_set_steps)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_steps2.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_step2.o) (STEPPER_set_steps2)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_stop_mode.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_step.o) (STEPPER_set_stop_mode)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_setup_decels.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_step.o) (STEPPER_setup_decels)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_init.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_init.o) (SYS_init)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_set_refcount.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_init.o) (SYS_set_refcount)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_firm_rev.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_open.o) (ATTINY_get_firm_rev)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_globals.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ATTINY_initialize_params.o) (ATTINY_params)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_globals.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_new.o) (timer_busy_status)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_open.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_init.o) (TMRSRVC_open)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_start.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__TMRSRVC_insert.o) (TMRSRVC_start)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__TMRSRVC_init.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_open.o) (__TMRSRVC_init)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__TMRSRVC_start.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_open.o) (__TMRSRVC_start)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR_attach.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_open.o) (ISR_attach)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ISR_attach.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_open.o) (__ISR_attach)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR__SPKR__TIMER1_COMPA_vect.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_open.o) (__SPKR_TIMER1_COMPA_vect)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_beep.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_play_beep.o) (SPKR_beep)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_clk.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR__SPKR__TIMER1_COMPA_vect.o) (SPKR_clk)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_decel_step_values.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_setup_decels.o) (STEPPER_set_decel_step_values)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_open.o) (__TIMER0_COMPA_vect)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_tick.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o) (TMRSRVC_tick)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_beep_clk.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o) (SPKR_beep_clk)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_clk.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o) (STEPPER_clk)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_accel.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_clk.o) (STEPPER_process_accel)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_run_mode.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_clk.o) (STEPPER_process_run_mode)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_step_mode.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_run_mode.o) (STEPPER_process_step_mode)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_process.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_tick.o) (TMRSRVC_process)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_stop.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_process.o) (TMRSRVC_stop)
-C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_pwm.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_run_mode.o) (STEPPER_process_pwm)
+../../../../../CEENBoT Files\libcapi324v221.a(__TMRSRVC_insert.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_new.o) (TMRSRVC_insert)
+../../../../../CEENBoT Files\libcapi324v221.a(CBOT_init.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_main.o) (CBOT_init)
+../../../../../CEENBoT Files\libcapi324v221.a(CBOT_isr.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_main.o) (CBOT_ISR_init)
+../../../../../CEENBoT Files\libcapi324v221.a(ISR_globals.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_isr.o) (CBOT_ISR_vtable)
+../../../../../CEENBoT Files\libcapi324v221.a(ISR_open.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_init.o) (ISR_open)
+../../../../../CEENBoT Files\libcapi324v221.a(LCD_globals.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LCD_open.o) (LCD_stdout)
+../../../../../CEENBoT Files\libcapi324v221.a(__LCD_putchar.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LCD_globals.o) (__LCD_putchar)
+../../../../../CEENBoT Files\libcapi324v221.a(LED_clr_pattern.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(__LED_init.o) (LED_clr_pattern)
+../../../../../CEENBoT Files\libcapi324v221.a(__LED_clr_pattern.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LED_clr_pattern.o) (__LED_clr_pattern)
+../../../../../CEENBoT Files\libcapi324v221.a(ATMEGA_open.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_init.o) (ATMEGA_open)
+../../../../../CEENBoT Files\libcapi324v221.a(ATMEGA_set_clk_mode.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(ATMEGA_open.o) (ATMEGA_set_clk_mode)
+../../../../../CEENBoT Files\libcapi324v221.a(__ATMEGA_init.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(ATMEGA_open.o) (__ATMEGA_init)
+../../../../../CEENBoT Files\libcapi324v221.a(SPI_cfgrs.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPI_open.o) (SPI_FLASH_config)
+../../../../../CEENBoT Files\libcapi324v221.a(SPI_globals.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPI_set_config_func.o) (spi_config_func_LUT)
+../../../../../CEENBoT Files\libcapi324v221.a(SPI_receive.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_sensors.o) (SPI_receive)
+../../../../../CEENBoT Files\libcapi324v221.a(SPKR_close.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(__LCD_putchar.o) (SPKR_close)
+../../../../../CEENBoT Files\libcapi324v221.a(SPKR_globals.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_close.o) (tone_mode_active)
+../../../../../CEENBoT Files\libcapi324v221.a(SPKR_open.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(__LCD_putchar.o) (SPKR_open)
+../../../../../CEENBoT Files\libcapi324v221.a(SPKR_play_beep.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(__LCD_putchar.o) (SPKR_play_beep)
+../../../../../CEENBoT Files\libcapi324v221.a(__SPKR_close.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_close.o) (__SPKR_close)
+../../../../../CEENBoT Files\libcapi324v221.a(__SPKR_init.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_open.o) (__SPKR_init)
+../../../../../CEENBoT Files\libcapi324v221.a(__SPKR_stop.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_close.o) (__SPKR_stop)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_globals.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_open.o) (STEPPER_params)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_go.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_step.o) (STEPPER_go)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_steps.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_step.o) (STEPPER_set_steps)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_steps2.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_step2.o) (STEPPER_set_steps2)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_stop_mode.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_step.o) (STEPPER_set_stop_mode)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_setup_decels.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_step.o) (STEPPER_setup_decels)
+../../../../../CEENBoT Files\libcapi324v221.a(SYS_init.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_init.o) (SYS_init)
+../../../../../CEENBoT Files\libcapi324v221.a(SYS_set_refcount.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SYS_init.o) (SYS_set_refcount)
+../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_firm_rev.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_open.o) (ATTINY_get_firm_rev)
+../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_globals.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(__ATTINY_initialize_params.o) (ATTINY_params)
+../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_globals.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_new.o) (timer_busy_status)
+../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_open.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_init.o) (TMRSRVC_open)
+../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_start.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(__TMRSRVC_insert.o) (TMRSRVC_start)
+../../../../../CEENBoT Files\libcapi324v221.a(__TMRSRVC_init.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_open.o) (__TMRSRVC_init)
+../../../../../CEENBoT Files\libcapi324v221.a(__TMRSRVC_start.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_open.o) (__TMRSRVC_start)
+../../../../../CEENBoT Files\libcapi324v221.a(ISR_attach.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_open.o) (ISR_attach)
+../../../../../CEENBoT Files\libcapi324v221.a(__ISR_attach.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_open.o) (__ISR_attach)
+../../../../../CEENBoT Files\libcapi324v221.a(ISR__SPKR__TIMER1_COMPA_vect.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_open.o) (__SPKR_TIMER1_COMPA_vect)
+../../../../../CEENBoT Files\libcapi324v221.a(SPKR_beep.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_play_beep.o) (SPKR_beep)
+../../../../../CEENBoT Files\libcapi324v221.a(SPKR_clk.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(ISR__SPKR__TIMER1_COMPA_vect.o) (SPKR_clk)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_decel_step_values.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_setup_decels.o) (STEPPER_set_decel_step_values)
+../../../../../CEENBoT Files\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_open.o) (__TIMER0_COMPA_vect)
+../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_tick.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o) (TMRSRVC_tick)
+../../../../../CEENBoT Files\libcapi324v221.a(SPKR_beep_clk.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o) (SPKR_beep_clk)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_clk.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o) (STEPPER_clk)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_accel.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_clk.o) (STEPPER_process_accel)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_run_mode.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_clk.o) (STEPPER_process_run_mode)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_step_mode.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_run_mode.o) (STEPPER_process_step_mode)
+../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_process.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_tick.o) (TMRSRVC_process)
+../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_stop.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_process.o) (TMRSRVC_stop)
+../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_pwm.o)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_run_mode.o) (STEPPER_process_pwm)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
                               (vfprintf)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(addsf3.o)
@@ -237,13 +237,13 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(gesf2.o)
                               main.o (__gtsf2)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(lrint.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_open.o) (lrint)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_open.o) (lrint)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(mulsf3.o)
                               main.o (__mulsf3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(mulsf3.o) (__mulsf3x)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(pow.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_open.o) (pow)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_open.o) (pow)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(exp.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(pow.o) (exp)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
@@ -261,9 +261,9 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(ldexp.o) (__fp_mpack)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulsi3.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_open.o) (__mulsi3)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_open.o) (__mulsi3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_play_beep.o) (__udivmodsi4)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_play_beep.o) (__udivmodsi4)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
                               C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega324p/avr5/crtatmega324p.o (exit)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_copy_data.o)
@@ -279,7 +279,7 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o) (__umulhisi3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_new.o) (malloc)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_new.o) (malloc)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o) (__ftoa_engine)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
@@ -289,7 +289,7 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(fputc.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o) (fputc)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(iob.o)
-                              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_open.o) (__iob)
+                              ../../../../../CEENBoT Files\libcapi324v221.a(LCD_open.o) (__iob)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(puts.o)
                               main.o (puts)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
@@ -299,17 +299,17 @@ Allocating common symbols
 Common symbol       size              file
 
 CBOT_SYSTEM_refcount
-                    0x15              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_globals.o)
+                    0x15              ../../../../../CEENBoT Files\libcapi324v221.a(SYS_globals.o)
 __brkval            0x2               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
-ATTINY_params       0x1e              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_globals.o)
-tmrNodes            0x3               C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_globals.o)
-STEPPER_params      0x37              C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_globals.o)
+ATTINY_params       0x1e              ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_globals.o)
+tmrNodes            0x3               ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_globals.o)
+STEPPER_params      0x37              ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_globals.o)
 action              0x9               main.o
-curr_spi_addr       0x1               C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_globals.o)
-LCD_params          0x5               C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_globals.o)
+curr_spi_addr       0x1               ../../../../../CEENBoT Files\libcapi324v221.a(SPI_globals.o)
+LCD_params          0x5               ../../../../../CEENBoT Files\libcapi324v221.a(LCD_globals.o)
 __flp               0x2               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
 __iob               0x6               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(iob.o)
-step_done           0x2               C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_globals.o)
+step_done           0x2               ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_globals.o)
 
 Discarded input sections
 
@@ -318,205 +318,205 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_open.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_open.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_sample.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_sample.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_set_VREF.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_set_VREF.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_set_channel.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ADC_init.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ADC_init.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_main.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_main.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_clear.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_clear.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_open.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_open.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_PGC_addr.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_PGC_addr.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_backlight.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_backlight.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_next_PGC.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_next_PGC.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_write.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_write.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LCD_init.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LCD_init.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_open.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_open.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_tog_pattern.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_tog_pattern.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LED_init.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LED_init.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LED_tog_pattern.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LED_tog_pattern.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_open.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_open.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_set_config_func.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_set_config_func.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_set_slave_addr.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_set_slave_addr.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_transmit.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_transmit.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPI_init.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPI_init.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_move.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_move.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_open.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_open.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_run.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_run.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_run2.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_run2.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_runn.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_runn.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_accel.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_accel.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_accel2.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_accel2.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_dir.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_dir.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_dir2.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_dir2.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_mode.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_mode.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_speed.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_speed.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_speed2.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_speed2.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_step.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_step2.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_stop.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_stop.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_wait_and_then.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_wait_and_then.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__STEPPER_init.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__STEPPER_init.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_decrement_refcount.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_decrement_refcount.o)
- .text          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_globals.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_globals.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_globals.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_increment_refcount.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_increment_refcount.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_isOpen.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_isOpen.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_sensors.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_sensors.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_open.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_open.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ATTINY_initialize_params.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ATTINY_initialize_params.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_delay.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_delay.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_new.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_new.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__TMRSRVC_insert.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__TMRSRVC_insert.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_init.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_init.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_isr.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_isr.o)
- .text          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR_globals.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR_globals.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR_open.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR_open.o)
- .text          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_globals.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_globals.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LCD_putchar.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LCD_putchar.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_clr_pattern.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_clr_pattern.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LED_clr_pattern.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LED_clr_pattern.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATMEGA_open.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATMEGA_open.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATMEGA_set_clk_mode.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATMEGA_set_clk_mode.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ATMEGA_init.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ATMEGA_init.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_cfgrs.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_cfgrs.o)
- .text          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_globals.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_globals.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_receive.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_receive.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_close.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_close.o)
- .text          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_globals.o)
- .data          0x00000000       0x38 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_globals.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_open.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_open.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_play_beep.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_play_beep.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPKR_close.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPKR_close.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPKR_init.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPKR_init.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPKR_stop.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPKR_stop.o)
- .text          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_globals.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_globals.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_go.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_go.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_steps.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_steps.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_steps2.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_steps2.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_stop_mode.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_stop_mode.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_setup_decels.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_setup_decels.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_init.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_init.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_set_refcount.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_set_refcount.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_firm_rev.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_firm_rev.o)
- .text          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_globals.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_globals.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_globals.o)
- .text          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_globals.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_globals.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_open.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_open.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_start.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_start.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__TMRSRVC_init.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__TMRSRVC_init.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__TMRSRVC_start.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__TMRSRVC_start.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR_attach.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR_attach.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ISR_attach.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ISR_attach.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR__SPKR__TIMER1_COMPA_vect.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR__SPKR__TIMER1_COMPA_vect.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_beep.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_beep.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_clk.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_clk.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_decel_step_values.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_decel_step_values.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_tick.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_tick.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_beep_clk.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_beep_clk.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_clk.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_clk.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_accel.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_accel.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_run_mode.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_step_mode.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_step_mode.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_process.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_process.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_stop.o)
- .bss           0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_stop.o)
- .data          0x00000000        0x0 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_pwm.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ADC_open.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ADC_open.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ADC_sample.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ADC_sample.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ADC_set_VREF.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ADC_set_VREF.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ADC_set_channel.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__ADC_init.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__ADC_init.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_main.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_main.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_clear.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_clear.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_open.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_open.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_PGC_addr.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_PGC_addr.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_backlight.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_backlight.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_next_PGC.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_next_PGC.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_write.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_write.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__LCD_init.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__LCD_init.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LED_open.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LED_open.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LED_tog_pattern.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LED_tog_pattern.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__LED_init.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__LED_init.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__LED_tog_pattern.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__LED_tog_pattern.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_open.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_open.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_set_config_func.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_set_config_func.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_set_slave_addr.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_set_slave_addr.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_transmit.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_transmit.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__SPI_init.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__SPI_init.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_move.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_move.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_open.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_open.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_run.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_run.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_run2.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_run2.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_runn.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_runn.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_accel.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_accel.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_accel2.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_accel2.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_dir.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_dir.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_dir2.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_dir2.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_mode.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_mode.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_speed.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_speed.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_speed2.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_speed2.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_step.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_step2.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_stop.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_stop.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_wait_and_then.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_wait_and_then.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__STEPPER_init.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__STEPPER_init.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_decrement_refcount.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_decrement_refcount.o)
+ .text          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_globals.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_globals.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_globals.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_increment_refcount.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_increment_refcount.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_isOpen.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_isOpen.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_sensors.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_sensors.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_open.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_open.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__ATTINY_initialize_params.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__ATTINY_initialize_params.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_delay.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_delay.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_new.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_new.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__TMRSRVC_insert.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__TMRSRVC_insert.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_init.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_init.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_isr.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_isr.o)
+ .text          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ISR_globals.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ISR_globals.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ISR_open.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ISR_open.o)
+ .text          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_globals.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_globals.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__LCD_putchar.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__LCD_putchar.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LED_clr_pattern.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(LED_clr_pattern.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__LED_clr_pattern.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__LED_clr_pattern.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ATMEGA_open.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ATMEGA_open.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ATMEGA_set_clk_mode.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ATMEGA_set_clk_mode.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__ATMEGA_init.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__ATMEGA_init.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_cfgrs.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_cfgrs.o)
+ .text          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_globals.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_globals.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_receive.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_receive.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_close.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_close.o)
+ .text          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_globals.o)
+ .data          0x00000000       0x38 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_globals.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_open.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_open.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_play_beep.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_play_beep.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__SPKR_close.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__SPKR_close.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__SPKR_init.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__SPKR_init.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__SPKR_stop.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__SPKR_stop.o)
+ .text          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_globals.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_globals.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_go.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_go.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_steps.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_steps.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_steps2.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_steps2.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_stop_mode.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_stop_mode.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_setup_decels.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_setup_decels.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_init.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_init.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_set_refcount.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_set_refcount.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_firm_rev.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_firm_rev.o)
+ .text          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_globals.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_globals.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_globals.o)
+ .text          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_globals.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_globals.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_open.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_open.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_start.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_start.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__TMRSRVC_init.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__TMRSRVC_init.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__TMRSRVC_start.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__TMRSRVC_start.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ISR_attach.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ISR_attach.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__ISR_attach.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(__ISR_attach.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ISR__SPKR__TIMER1_COMPA_vect.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ISR__SPKR__TIMER1_COMPA_vect.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_beep.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_beep.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_clk.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_clk.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_decel_step_values.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_decel_step_values.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_tick.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_tick.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_beep_clk.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_beep_clk.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_clk.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_clk.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_accel.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_accel.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_run_mode.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_step_mode.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_step_mode.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_process.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_process.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_stop.o)
+ .bss           0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_stop.o)
+ .data          0x00000000        0x0 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_pwm.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
@@ -775,7 +775,7 @@ Address of section .data set to 0x800100
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega324p/avr5/crtatmega324p.o
 LOAD main.o
 START GROUP
-LOAD C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a
+LOAD ../../../../../CEENBoT Files\libcapi324v221.a
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libprintf_flt.a
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a
 END GROUP
@@ -883,7 +883,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x4bc0
+.text           0x00000000     0x4be4
  *(.vectors)
  .vectors       0x00000000       0x7c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega324p/avr5/crtatmega324p.o
                 0x00000000                __vector_default
@@ -905,7 +905,7 @@ END GROUP
  *libc.a:*(.progmem.data)
  .progmem.data  0x00000106       0xfa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
  *(.progmem*)
- .progmem.data  0x00000200      0x415 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_globals.o)
+ .progmem.data  0x00000200      0x415 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_globals.o)
                 0x00000200                char_bitmap
                 0x00000415                CEENBoT_Inc_logo_bitmap
                 0x00000616                . = ALIGN (0x2)
@@ -969,107 +969,107 @@ END GROUP
                 0x00000650                __vector_8
                 0x00000650                __vector_26
                 0x00000650                __vector_20
- .text          0x00000654       0x18 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_open.o)
+ .text          0x00000654       0x18 ../../../../../CEENBoT Files\libcapi324v221.a(ADC_open.o)
                 0x00000654                ADC_open
- .text          0x0000066c       0x40 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_sample.o)
+ .text          0x0000066c       0x40 ../../../../../CEENBoT Files\libcapi324v221.a(ADC_sample.o)
                 0x0000066c                ADC_sample
- .text          0x000006ac       0x16 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_set_VREF.o)
+ .text          0x000006ac       0x16 ../../../../../CEENBoT Files\libcapi324v221.a(ADC_set_VREF.o)
                 0x000006ac                ADC_set_VREF
- .text          0x000006c2       0x6e C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_set_channel.o)
+ .text          0x000006c2       0x6e ../../../../../CEENBoT Files\libcapi324v221.a(ADC_set_channel.o)
                 0x000006c2                ADC_set_channel
- .text          0x00000730       0x16 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ADC_init.o)
+ .text          0x00000730       0x16 ../../../../../CEENBoT Files\libcapi324v221.a(__ADC_init.o)
                 0x00000730                __ADC_init
- .text          0x00000746       0x12 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_main.o)
+ .text          0x00000746       0x12 ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_main.o)
                 0x00000746                main
- .text          0x00000758       0x4c C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_clear.o)
+ .text          0x00000758       0x4c ../../../../../CEENBoT Files\libcapi324v221.a(LCD_clear.o)
                 0x00000758                LCD_clear
- .text          0x000007a4      0x110 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_open.o)
+ .text          0x000007a4      0x110 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_open.o)
                 0x000007a4                LCD_open
- .text          0x000008b4       0x44 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_PGC_addr.o)
+ .text          0x000008b4       0x44 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_PGC_addr.o)
                 0x000008b4                LCD_set_PGC_addr
- .text          0x000008f8       0x42 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_backlight.o)
+ .text          0x000008f8       0x42 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_backlight.o)
                 0x000008f8                LCD_set_backlight
- .text          0x0000093a       0x24 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_set_next_PGC.o)
+ .text          0x0000093a       0x24 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_set_next_PGC.o)
                 0x0000093a                LCD_set_next_PGC
- .text          0x0000095e       0x36 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_write.o)
+ .text          0x0000095e       0x36 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_write.o)
                 0x0000095e                LCD_write
- .text          0x00000994        0x4 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LCD_init.o)
+ .text          0x00000994        0x4 ../../../../../CEENBoT Files\libcapi324v221.a(__LCD_init.o)
                 0x00000994                __LCD_init
- .text          0x00000998       0x18 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_open.o)
+ .text          0x00000998       0x18 ../../../../../CEENBoT Files\libcapi324v221.a(LED_open.o)
                 0x00000998                LED_open
- .text          0x000009b0       0x18 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_tog_pattern.o)
+ .text          0x000009b0       0x18 ../../../../../CEENBoT Files\libcapi324v221.a(LED_tog_pattern.o)
                 0x000009b0                LED_tog_pattern
- .text          0x000009c8       0x12 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LED_init.o)
+ .text          0x000009c8       0x12 ../../../../../CEENBoT Files\libcapi324v221.a(__LED_init.o)
                 0x000009c8                __LED_init
- .text          0x000009da       0x1e C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LED_tog_pattern.o)
+ .text          0x000009da       0x1e ../../../../../CEENBoT Files\libcapi324v221.a(__LED_tog_pattern.o)
                 0x000009da                __LED_tog_pattern
- .text          0x000009f8       0x74 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_open.o)
+ .text          0x000009f8       0x74 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_open.o)
                 0x000009f8                SPI_open
- .text          0x00000a6c       0x12 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_set_config_func.o)
+ .text          0x00000a6c       0x12 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_set_config_func.o)
                 0x00000a6c                SPI_set_config_func
- .text          0x00000a7e       0xbe C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_set_slave_addr.o)
+ .text          0x00000a7e       0xbe ../../../../../CEENBoT Files\libcapi324v221.a(SPI_set_slave_addr.o)
                 0x00000a7e                SPI_set_slave_addr
- .text          0x00000b3c       0x1e C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_transmit.o)
+ .text          0x00000b3c       0x1e ../../../../../CEENBoT Files\libcapi324v221.a(SPI_transmit.o)
                 0x00000b3c                SPI_transmit
- .text          0x00000b5a        0xe C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPI_init.o)
+ .text          0x00000b5a        0xe ../../../../../CEENBoT Files\libcapi324v221.a(__SPI_init.o)
                 0x00000b5a                __SPI_init
- .text          0x00000b68      0x244 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_move.o)
+ .text          0x00000b68      0x244 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_move.o)
                 0x00000cbc                STEPPER_move
- .text          0x00000dac       0xec C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_open.o)
+ .text          0x00000dac       0xec ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_open.o)
                 0x00000dac                STEPPER_open
- .text          0x00000e98       0x2e C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_run.o)
+ .text          0x00000e98       0x2e ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_run.o)
                 0x00000e98                STEPPER_run
- .text          0x00000ec6       0x3a C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_run2.o)
+ .text          0x00000ec6       0x3a ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_run2.o)
                 0x00000ec6                STEPPER_run2
- .text          0x00000f00       0x90 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_runn.o)
+ .text          0x00000f00       0x90 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_runn.o)
                 0x00000f00                STEPPER_runn
- .text          0x00000f90       0x42 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_accel.o)
+ .text          0x00000f90       0x42 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_accel.o)
                 0x00000f90                STEPPER_set_accel
- .text          0x00000fd2       0x38 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_accel2.o)
+ .text          0x00000fd2       0x38 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_accel2.o)
                 0x00000fd2                STEPPER_set_accel2
- .text          0x0000100a       0x2a C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_dir.o)
+ .text          0x0000100a       0x2a ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_dir.o)
                 0x0000100a                STEPPER_set_dir
- .text          0x00001034       0x14 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_dir2.o)
+ .text          0x00001034       0x14 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_dir2.o)
                 0x00001034                STEPPER_set_dir2
- .text          0x00001048       0x2a C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_mode.o)
+ .text          0x00001048       0x2a ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_mode.o)
                 0x00001048                STEPPER_set_mode
- .text          0x00001072       0x58 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_speed.o)
+ .text          0x00001072       0x58 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_speed.o)
                 0x00001072                STEPPER_set_speed
- .text          0x000010ca       0x3c C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_speed2.o)
+ .text          0x000010ca       0x3c ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_speed2.o)
                 0x000010ca                STEPPER_set_speed2
- .text          0x00001106      0x124 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_step.o)
+ .text          0x00001106      0x124 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_step.o)
                 0x00001106                STEPPER_step
- .text          0x0000122a      0x10a C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_step2.o)
+ .text          0x0000122a      0x10a ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_step2.o)
                 0x0000122a                STEPPER_step2
- .text          0x00001334       0x4a C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_stop.o)
+ .text          0x00001334       0x4a ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_stop.o)
                 0x00001334                STEPPER_stop
- .text          0x0000137e       0xde C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_wait_and_then.o)
+ .text          0x0000137e       0xde ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_wait_and_then.o)
                 0x0000137e                STEPPER_wait_and_then
- .text          0x0000145c       0x14 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__STEPPER_init.o)
+ .text          0x0000145c       0x14 ../../../../../CEENBoT Files\libcapi324v221.a(__STEPPER_init.o)
                 0x0000145c                __STEPPER_init
- .text          0x00001470       0x22 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_decrement_refcount.o)
+ .text          0x00001470       0x22 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_decrement_refcount.o)
                 0x00001470                SYS_decrement_refcount
- .text          0x00001492       0x1c C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_increment_refcount.o)
+ .text          0x00001492       0x1c ../../../../../CEENBoT Files\libcapi324v221.a(SYS_increment_refcount.o)
                 0x00001492                SYS_increment_refcount
- .text          0x000014ae       0x1a C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_isOpen.o)
+ .text          0x000014ae       0x1a ../../../../../CEENBoT Files\libcapi324v221.a(SYS_isOpen.o)
                 0x000014ae                SYS_isOpen
- .text          0x000014c8       0x6c C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_IR_state.o)
+ .text          0x000014c8       0x6c ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_IR_state.o)
                 0x000014c8                ATTINY_get_IR_state
- .text          0x00001534       0x64 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_sensors.o)
+ .text          0x00001534       0x64 ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_sensors.o)
                 0x00001534                ATTINY_get_sensors
- .text          0x00001598       0x58 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_open.o)
+ .text          0x00001598       0x58 ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_open.o)
                 0x00001598                ATTINY_open
- .text          0x000015f0       0x82 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ATTINY_initialize_params.o)
+ .text          0x000015f0       0x82 ../../../../../CEENBoT Files\libcapi324v221.a(__ATTINY_initialize_params.o)
                 0x000015f0                __ATTINY_initialize_params
- .text          0x00001672       0x5c C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_delay.o)
+ .text          0x00001672       0x5c ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_delay.o)
                 0x00001672                TMRSRVC_delay
- .text          0x000016ce       0x7e C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_new.o)
+ .text          0x000016ce       0x7e ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_new.o)
                 0x000016ce                TMRSRVC_new
- .text          0x0000174c       0xd2 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__TMRSRVC_insert.o)
+ .text          0x0000174c       0xd2 ../../../../../CEENBoT Files\libcapi324v221.a(__TMRSRVC_insert.o)
                 0x0000174c                TMRSRVC_insert
- .text          0x0000181e       0x1c C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_init.o)
+ .text          0x0000181e       0x1c ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_init.o)
                 0x0000181e                CBOT_init
- .text          0x0000183a      0x480 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(CBOT_isr.o)
+ .text          0x0000183a      0x480 ../../../../../CEENBoT Files\libcapi324v221.a(CBOT_isr.o)
                 0x0000183a                CBOT_ISR_init
                 0x0000183e                __vector_16
                 0x00001890                __vector_17
@@ -1085,100 +1085,100 @@ END GROUP
                 0x00001bc4                __vector_5
                 0x00001c16                __vector_6
                 0x00001c68                __vector_7
- .text          0x00001cba       0x24 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR_open.o)
+ .text          0x00001cba       0x24 ../../../../../CEENBoT Files\libcapi324v221.a(ISR_open.o)
                 0x00001cba                ISR_open
- .text          0x00001cde      0x168 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LCD_putchar.o)
+ .text          0x00001cde      0x168 ../../../../../CEENBoT Files\libcapi324v221.a(__LCD_putchar.o)
                 0x00001cde                __LCD_putchar
- .text          0x00001e46       0x18 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LED_clr_pattern.o)
+ .text          0x00001e46       0x18 ../../../../../CEENBoT Files\libcapi324v221.a(LED_clr_pattern.o)
                 0x00001e46                LED_clr_pattern
- .text          0x00001e5e        0xc C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__LED_clr_pattern.o)
+ .text          0x00001e5e        0xc ../../../../../CEENBoT Files\libcapi324v221.a(__LED_clr_pattern.o)
                 0x00001e5e                __LED_clr_pattern
- .text          0x00001e6a       0x12 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATMEGA_open.o)
+ .text          0x00001e6a       0x12 ../../../../../CEENBoT Files\libcapi324v221.a(ATMEGA_open.o)
                 0x00001e6a                ATMEGA_open
- .text          0x00001e7c       0xac C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATMEGA_set_clk_mode.o)
+ .text          0x00001e7c       0xac ../../../../../CEENBoT Files\libcapi324v221.a(ATMEGA_set_clk_mode.o)
                 0x00001e7c                ATMEGA_set_clk_mode
- .text          0x00001f28        0x6 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ATMEGA_init.o)
+ .text          0x00001f28        0x6 ../../../../../CEENBoT Files\libcapi324v221.a(__ATMEGA_init.o)
                 0x00001f28                __ATMEGA_init
- .text          0x00001f2e       0x52 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_cfgrs.o)
+ .text          0x00001f2e       0x52 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_cfgrs.o)
                 0x00001f2e                SPI_FLASH_config
                 0x00001f40                SPI_default_config
                 0x00001f50                SPI_ATtiny0_config
                 0x00001f60                SPI_PSXC_config
                 0x00001f70                SPI_LCD_config
- .text          0x00001f80       0x22 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_receive.o)
+ .text          0x00001f80       0x22 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_receive.o)
                 0x00001f80                SPI_receive
- .text          0x00001fa2       0x64 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_close.o)
+ .text          0x00001fa2       0x64 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_close.o)
                 0x00001fa2                __SPKR_close_beep_mode
                 0x00001fb8                __SPKR_close_tone_mode
                 0x00001ff2                SPKR_close
- .text          0x00002006      0x164 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_open.o)
+ .text          0x00002006      0x164 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_open.o)
                 0x00002006                __SPKR_set_up_freq_LUT
                 0x000020cc                __SPKR_open_beep_mode
                 0x000020f2                __SPKR_open_tone_mode
                 0x00002150                SPKR_open
- .text          0x0000216a       0xac C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_play_beep.o)
+ .text          0x0000216a       0xac ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_play_beep.o)
                 0x0000216a                SPKR_play_beep
- .text          0x00002216       0x38 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPKR_close.o)
+ .text          0x00002216       0x38 ../../../../../CEENBoT Files\libcapi324v221.a(__SPKR_close.o)
                 0x00002216                __SPKR_close
- .text          0x0000224e       0x54 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPKR_init.o)
+ .text          0x0000224e       0x54 ../../../../../CEENBoT Files\libcapi324v221.a(__SPKR_init.o)
                 0x0000224e                __SPKR_init
- .text          0x000022a2        0xc C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__SPKR_stop.o)
+ .text          0x000022a2        0xc ../../../../../CEENBoT Files\libcapi324v221.a(__SPKR_stop.o)
                 0x000022a2                __SPKR_stop
- .text          0x000022ae       0x2a C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_go.o)
+ .text          0x000022ae       0x2a ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_go.o)
                 0x000022ae                STEPPER_go
- .text          0x000022d8       0x36 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_steps.o)
+ .text          0x000022d8       0x36 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_steps.o)
                 0x000022d8                STEPPER_set_steps
- .text          0x0000230e       0x1c C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_steps2.o)
+ .text          0x0000230e       0x1c ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_steps2.o)
                 0x0000230e                STEPPER_set_steps2
- .text          0x0000232a       0x2a C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_stop_mode.o)
+ .text          0x0000232a       0x2a ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_stop_mode.o)
                 0x0000232a                STEPPER_set_stop_mode
- .text          0x00002354       0x7a C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_setup_decels.o)
+ .text          0x00002354       0x7a ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_setup_decels.o)
                 0x00002354                STEPPER_setup_decels
- .text          0x000023ce       0x1e C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_init.o)
+ .text          0x000023ce       0x1e ../../../../../CEENBoT Files\libcapi324v221.a(SYS_init.o)
                 0x000023ce                SYS_init
- .text          0x000023ec       0x10 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_set_refcount.o)
+ .text          0x000023ec       0x10 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_set_refcount.o)
                 0x000023ec                SYS_set_refcount
- .text          0x000023fc       0x7a C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_firm_rev.o)
+ .text          0x000023fc       0x7a ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_firm_rev.o)
                 0x000023fc                ATTINY_get_firm_rev
- .text          0x00002476       0x3a C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_open.o)
+ .text          0x00002476       0x3a ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_open.o)
                 0x00002476                TMRSRVC_open
- .text          0x000024b0        0x8 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_start.o)
+ .text          0x000024b0        0x8 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_start.o)
                 0x000024b0                TMRSRVC_start
- .text          0x000024b8       0x12 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__TMRSRVC_init.o)
+ .text          0x000024b8       0x12 ../../../../../CEENBoT Files\libcapi324v221.a(__TMRSRVC_init.o)
                 0x000024b8                __TMRSRVC_init
- .text          0x000024ca        0xc C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__TMRSRVC_start.o)
+ .text          0x000024ca        0xc ../../../../../CEENBoT Files\libcapi324v221.a(__TMRSRVC_start.o)
                 0x000024ca                __TMRSRVC_start
- .text          0x000024d6       0x26 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR_attach.o)
+ .text          0x000024d6       0x26 ../../../../../CEENBoT Files\libcapi324v221.a(ISR_attach.o)
                 0x000024d6                ISR_attach
- .text          0x000024fc       0x20 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(__ISR_attach.o)
+ .text          0x000024fc       0x20 ../../../../../CEENBoT Files\libcapi324v221.a(__ISR_attach.o)
                 0x000024fc                __ISR_attach
- .text          0x0000251c        0x6 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR__SPKR__TIMER1_COMPA_vect.o)
+ .text          0x0000251c        0x6 ../../../../../CEENBoT Files\libcapi324v221.a(ISR__SPKR__TIMER1_COMPA_vect.o)
                 0x0000251c                __SPKR_TIMER1_COMPA_vect
- .text          0x00002522       0x48 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_beep.o)
+ .text          0x00002522       0x48 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_beep.o)
                 0x00002522                SPKR_beep
- .text          0x0000256a       0x82 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_clk.o)
+ .text          0x0000256a       0x82 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_clk.o)
                 0x0000256a                SPKR_clk
- .text          0x000025ec       0xd6 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_set_decel_step_values.o)
+ .text          0x000025ec       0xd6 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_set_decel_step_values.o)
                 0x000025ec                STEPPER_set_decel_step_values
- .text          0x000026c2        0xe C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o)
+ .text          0x000026c2        0xe ../../../../../CEENBoT Files\libcapi324v221.a(ISR__TIMER0_COMPA_vect.o)
                 0x000026c2                __TIMER0_COMPA_vect
- .text          0x000026d0       0x34 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_tick.o)
+ .text          0x000026d0       0x34 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_tick.o)
                 0x000026d0                TMRSRVC_tick
- .text          0x00002704       0x4e C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_beep_clk.o)
+ .text          0x00002704       0x4e ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_beep_clk.o)
                 0x00002704                SPKR_beep_clk
- .text          0x00002752      0x162 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_clk.o)
+ .text          0x00002752      0x162 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_clk.o)
                 0x00002752                STEPPER_clk
- .text          0x000028b4       0x8a C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_accel.o)
+ .text          0x000028b4       0x8a ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_accel.o)
                 0x000028b4                STEPPER_process_accel
- .text          0x0000293e      0x1fe C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_run_mode.o)
+ .text          0x0000293e      0x1fe ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_run_mode.o)
                 0x0000293e                STEPPER_process_run_mode
- .text          0x00002b3c       0xac C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_step_mode.o)
+ .text          0x00002b3c       0xac ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_step_mode.o)
                 0x00002b3c                STEPPER_process_step_mode
- .text          0x00002be8       0xd8 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_process.o)
+ .text          0x00002be8       0xd8 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_process.o)
                 0x00002be8                TMRSRVC_process
- .text          0x00002cc0        0x6 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_stop.o)
+ .text          0x00002cc0        0x6 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_stop.o)
                 0x00002cc0                TMRSRVC_stop
- .text          0x00002cc6      0x130 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_pwm.o)
+ .text          0x00002cc6      0x130 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_pwm.o)
                 0x00002cc6                STEPPER_process_pwm
                 0x00002df6                . = ALIGN (0x2)
  *(.text.*)
@@ -1200,154 +1200,154 @@ END GROUP
  .text.Cruise   0x00003012       0x20 main.o
                 0x00003012                Cruise
  .text.IR_avoid
-                0x00003032      0x23e main.o
+                0x00003032      0x262 main.o
                 0x00003032                IR_avoid
  .text.Light_Follow
-                0x00003270      0x29e main.o
-                0x00003270                Light_Follow
- .text.act      0x0000350e       0x40 main.o
-                0x0000350e                act
+                0x00003294      0x29e main.o
+                0x00003294                Light_Follow
+ .text.act      0x00003532       0x40 main.o
+                0x00003532                act
  .text.CBOT_main
-                0x0000354e       0xb8 main.o
-                0x0000354e                CBOT_main
+                0x00003572       0xb8 main.o
+                0x00003572                CBOT_main
  .text.avr-libc
-                0x00003606      0x6f8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
-                0x00003606                vfprintf
+                0x0000362a      0x6f8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
+                0x0000362a                vfprintf
  .text.avr-libc.fplib
-                0x00003cfe        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(addsf3.o)
-                0x00003cfe                __subsf3
-                0x00003d00                __addsf3
+                0x00003d22        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                0x00003d22                __subsf3
+                0x00003d24                __addsf3
  .text.avr-libc.fplib
-                0x00003d0c       0xcc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(addsf3x.o)
-                0x00003d2e                __addsf3x
+                0x00003d30       0xcc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                0x00003d52                __addsf3x
  .text.avr-libc.fplib
-                0x00003dd8        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(divsf3.o)
-                0x00003dd8                __divsf3
+                0x00003dfc        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                0x00003dfc                __divsf3
  .text.avr-libc.fplib
-                0x00003de0       0xdc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(divsf3x.o)
-                0x00003e00                __divsf3x
-                0x00003e06                __divsf3_pse
+                0x00003e04       0xdc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                0x00003e24                __divsf3x
+                0x00003e2a                __divsf3_pse
  .text.avr-libc.fplib
-                0x00003ebc        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
-                0x00003ebc                __fixsfsi
+                0x00003ee0        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+                0x00003ee0                __fixsfsi
  .text.avr-libc.fplib
-                0x00003eca       0x5e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
-                0x00003eca                __fixunssfsi
+                0x00003eee       0x5e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                0x00003eee                __fixunssfsi
  .text.avr-libc.fplib
-                0x00003f28       0x7a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(floatsisf.o)
-                0x00003f28                __floatunsisf
-                0x00003f2c                __floatsisf
+                0x00003f4c       0x7a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                0x00003f4c                __floatunsisf
+                0x00003f50                __floatsisf
  .text.avr-libc.fplib
-                0x00003fa2        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_inf.o)
-                0x00003fa2                __fp_inf
+                0x00003fc6        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                0x00003fc6                __fp_inf
  .text.avr-libc.fplib
-                0x00003fae        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_nan.o)
-                0x00003fae                __fp_nan
+                0x00003fd2        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                0x00003fd2                __fp_nan
  .text.avr-libc.fplib
-                0x00003fb4        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
-                0x00003fb4                __fp_pscA
+                0x00003fd8        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                0x00003fd8                __fp_pscA
  .text.avr-libc.fplib
-                0x00003fc2        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
-                0x00003fc2                __fp_pscB
+                0x00003fe6        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                0x00003fe6                __fp_pscB
  .text.avr-libc.fplib
-                0x00003fd0       0x22 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_round.o)
-                0x00003fd0                __fp_round
+                0x00003ff4       0x22 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                0x00003ff4                __fp_round
  .text.avr-libc.fplib
-                0x00003ff2       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_split3.o)
-                0x00003ff2                __fp_split3
-                0x00004002                __fp_splitA
+                0x00004016       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                0x00004016                __fp_split3
+                0x00004026                __fp_splitA
  .text.avr-libc.fplib
-                0x00004036        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_zero.o)
-                0x00004036                __fp_zero
-                0x00004038                __fp_szero
+                0x0000405a        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x0000405a                __fp_zero
+                0x0000405c                __fp_szero
  .text.avr-libc.fplib
-                0x00004044        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(gesf2.o)
-                0x00004044                __gesf2
-                0x00004044                __gtsf2
+                0x00004068        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(gesf2.o)
+                0x00004068                __gesf2
+                0x00004068                __gtsf2
  .text.avr-libc.fplib
-                0x0000404e       0x7a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(lrint.o)
-                0x0000404e                lrint
+                0x00004072       0x7a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(lrint.o)
+                0x00004072                lrint
  .text.avr-libc.fplib
-                0x000040c8        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(mulsf3.o)
-                0x000040c8                __mulsf3
+                0x000040ec        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                0x000040ec                __mulsf3
  .text.avr-libc.fplib
-                0x000040d0       0xd2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
-                0x000040ee                __mulsf3x
-                0x000040f4                __mulsf3_pse
+                0x000040f4       0xd2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                0x00004112                __mulsf3x
+                0x00004118                __mulsf3_pse
  .text.avr-libc.fplib
-                0x000041a2       0xa0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(pow.o)
-                0x000041a2                pow
+                0x000041c6       0xa0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(pow.o)
+                0x000041c6                pow
  .text.avr-libc.fplib
-                0x00004242       0x74 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(exp.o)
-                0x00004252                exp
+                0x00004266       0x74 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(exp.o)
+                0x00004276                exp
  .text.avr-libc.fplib
-                0x000042b6       0x48 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
-                0x000042b6                __fp_cmp
+                0x000042da       0x48 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
+                0x000042da                __fp_cmp
  .text.avr-libc.fplib
-                0x000042fe       0x4e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_powser.o)
-                0x000042fe                __fp_powser
+                0x00004322       0x4e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_powser.o)
+                0x00004322                __fp_powser
  .text.avr-libc.fplib
-                0x0000434c       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(inverse.o)
-                0x0000434c                inverse
+                0x00004370       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(inverse.o)
+                0x00004370                inverse
  .text.avr-libc.fplib
-                0x0000435c       0x74 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(ldexp.o)
-                0x00004364                ldexp
+                0x00004380       0x74 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(ldexp.o)
+                0x00004388                ldexp
  .text.avr-libc.fplib
-                0x000043d0       0xa0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(log.o)
-                0x000043e0                log
+                0x000043f4       0xa0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(log.o)
+                0x00004404                log
  .text.avr-libc.fplib
-                0x00004470       0x68 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(modf.o)
-                0x00004470                modf
-                0x00004470                modff
+                0x00004494       0x68 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(modf.o)
+                0x00004494                modf
+                0x00004494                modff
  .text.avr-libc.fplib
-                0x000044d8       0x1c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
-                0x000044d8                __fp_mpack
-                0x000044dc                __fp_mpack_finite
+                0x000044fc       0x1c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
+                0x000044fc                __fp_mpack
+                0x00004500                __fp_mpack_finite
  .text.libgcc.mul
-                0x000044f4       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulsi3.o)
-                0x000044f4                __mulsi3
+                0x00004518       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_mulsi3.o)
+                0x00004518                __mulsi3
  .text.libgcc.div
-                0x00004514       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
-                0x00004514                __udivmodsi4
+                0x00004538       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_udivmodsi4.o)
+                0x00004538                __udivmodsi4
  .text.libgcc.mul
-                0x00004558       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o)
-                0x00004558                __muluhisi3
+                0x0000457c       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_muluhisi3.o)
+                0x0000457c                __muluhisi3
  .text.libgcc.prologue
-                0x0000456e       0x38 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_prologue.o)
-                0x0000456e                __prologue_saves__
+                0x00004592       0x38 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_prologue.o)
+                0x00004592                __prologue_saves__
  .text.libgcc.prologue
-                0x000045a6       0x36 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_epilogue.o)
-                0x000045a6                __epilogue_restores__
+                0x000045ca       0x36 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_epilogue.o)
+                0x000045ca                __epilogue_restores__
  .text.libgcc.mul
-                0x000045dc       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
-                0x000045dc                __umulhisi3
+                0x00004600       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_umulhisi3.o)
+                0x00004600                __umulhisi3
  .text.avr-libc
-                0x000045fa      0x25a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
-                0x000045fa                malloc
-                0x00004724                free
+                0x0000461e      0x25a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x0000461e                malloc
+                0x00004748                free
  .text.avr-libc
-                0x00004854      0x1b0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
-                0x00004854                __ftoa_engine
+                0x00004878      0x1b0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
+                0x00004878                __ftoa_engine
  .text.avr-libc
-                0x00004a04       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
-                0x00004a04                strnlen_P
+                0x00004a28       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+                0x00004a28                strnlen_P
  .text.avr-libc
-                0x00004a1a       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(strnlen.o)
-                0x00004a1a                strnlen
+                0x00004a3e       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(strnlen.o)
+                0x00004a3e                strnlen
  .text.avr-libc
-                0x00004a30       0x70 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(fputc.o)
-                0x00004a30                fputc
+                0x00004a54       0x70 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(fputc.o)
+                0x00004a54                fputc
  .text.avr-libc
-                0x00004aa0       0x60 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(puts.o)
-                0x00004aa0                puts
+                0x00004ac4       0x60 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(puts.o)
+                0x00004ac4                puts
  .text.avr-libc
-                0x00004b00       0xbc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
-                0x00004b00                __ultoa_invert
-                0x00004bbc                . = ALIGN (0x2)
+                0x00004b24       0xbc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+                0x00004b24                __ultoa_invert
+                0x00004be0                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00004bbc        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
-                0x00004bbc                _exit
-                0x00004bbc                exit
+ .fini9         0x00004be0        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+                0x00004be0                _exit
+                0x00004be0                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1366,18 +1366,18 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00004bbc        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .fini0         0x00004be0        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00004bc0                _etext = .
+                0x00004be4                _etext = .
 
-.data           0x00800100       0x6a load address 0x00004bc0
+.data           0x00800100       0x6a load address 0x00004be4
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
- .data          0x00800100        0x1 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ADC_set_channel.o)
- .data          0x00800101        0x4 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_IR_state.o)
- .data          0x00800105        0xe C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_globals.o)
+ .data          0x00800100        0x1 ../../../../../CEENBoT Files\libcapi324v221.a(ADC_set_channel.o)
+ .data          0x00800101        0x4 ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_IR_state.o)
+ .data          0x00800105        0xe ../../../../../CEENBoT Files\libcapi324v221.a(LCD_globals.o)
                 0x00800105                LCD_stdout
- .data          0x00800113        0x8 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_globals.o)
+ .data          0x00800113        0x8 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_globals.o)
                 0x00800113                Motor_L_LUT
                 0x00800117                Motor_R_LUT
  .data          0x0080011b        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
@@ -1397,14 +1397,14 @@ END GROUP
 .bss            0x0080016a      0x11c
                 0x0080016a                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x0080016a        0x2 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_step.o)
- .bss           0x0080016c        0x2 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_step2.o)
- .bss           0x0080016e        0xb C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_get_IR_state.o)
- .bss           0x00800179       0x40 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ISR_globals.o)
+ .bss           0x0080016a        0x2 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_step.o)
+ .bss           0x0080016c        0x2 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_step2.o)
+ .bss           0x0080016e        0xb ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_get_IR_state.o)
+ .bss           0x00800179       0x40 ../../../../../CEENBoT Files\libcapi324v221.a(ISR_globals.o)
                 0x00800179                CBOT_ISR_vtable
- .bss           0x008001b9       0x10 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_globals.o)
+ .bss           0x008001b9       0x10 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_globals.o)
                 0x008001b9                spi_config_func_LUT
- .bss           0x008001c9       0x10 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPKR_globals.o)
+ .bss           0x008001c9       0x10 ../../../../../CEENBoT Files\libcapi324v221.a(SPKR_globals.o)
                 0x008001c9                tone_mode_active
                 0x008001ca                beep_mode_active
                 0x008001cb                spkr_accum32
@@ -1412,11 +1412,11 @@ END GROUP
                 0x008001d3                beep_accum16
                 0x008001d5                beep_freq
                 0x008001d7                p_Freq_LUT
- .bss           0x008001d9        0x2 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_globals.o)
+ .bss           0x008001d9        0x2 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_globals.o)
                 0x008001d9                timer_busy_status
                 0x008001da                timer_run_status
- .bss           0x008001db        0x1 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_run_mode.o)
- .bss           0x008001dc        0x4 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_process_pwm.o)
+ .bss           0x008001db        0x1 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_run_mode.o)
+ .bss           0x008001dc        0x4 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_process_pwm.o)
  *(.bss*)
  .bss.previous_action.3679
                 0x008001e0        0x9 main.o
@@ -1433,18 +1433,18 @@ END GROUP
  *(COMMON)
  COMMON         0x008001fe        0x9 main.o
                 0x008001fe                action
- COMMON         0x00800207       0x15 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SYS_globals.o)
+ COMMON         0x00800207       0x15 ../../../../../CEENBoT Files\libcapi324v221.a(SYS_globals.o)
                 0x00800207                CBOT_SYSTEM_refcount
- COMMON         0x0080021c        0x5 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(LCD_globals.o)
+ COMMON         0x0080021c        0x5 ../../../../../CEENBoT Files\libcapi324v221.a(LCD_globals.o)
                 0x0080021c                LCD_params
- COMMON         0x00800221        0x1 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(SPI_globals.o)
+ COMMON         0x00800221        0x1 ../../../../../CEENBoT Files\libcapi324v221.a(SPI_globals.o)
                 0x00800221                curr_spi_addr
- COMMON         0x00800222       0x39 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(STEPPER_globals.o)
+ COMMON         0x00800222       0x39 ../../../../../CEENBoT Files\libcapi324v221.a(STEPPER_globals.o)
                 0x00800222                STEPPER_params
                 0x00800259                step_done
- COMMON         0x0080025b       0x1e C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(ATTINY_globals.o)
+ COMMON         0x0080025b       0x1e ../../../../../CEENBoT Files\libcapi324v221.a(ATTINY_globals.o)
                 0x0080025b                ATTINY_params
- COMMON         0x00800279        0x3 C:\Users\megan\Google Drive\College\S6 - Spring 2017\Mobile Robotics\Lab\Library\libcapi324v221.a(TMRSRVC_globals.o)
+ COMMON         0x00800279        0x3 ../../../../../CEENBoT Files\libcapi324v221.a(TMRSRVC_globals.o)
                 0x00800279                tmrNodes
  COMMON         0x0080027c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(malloc.o)
                 0x0080027c                __brkval
@@ -1452,8 +1452,8 @@ END GROUP
  COMMON         0x00800280        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(iob.o)
                 0x00800280                __iob
                 0x00800286                PROVIDE (__bss_end, .)
-                0x00004bc0                __data_load_start = LOADADDR (.data)
-                0x00004c2a                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00004be4                __data_load_start = LOADADDR (.data)
+                0x00004c4e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800286        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
