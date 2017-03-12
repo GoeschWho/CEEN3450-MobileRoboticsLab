@@ -207,7 +207,6 @@ do {									  \
 		} // end info_display()
 
 
-
 		// ------------------------------------------------------------------------------------------------------------------------------------------------ //
 		BOOL compare_actions( volatile MOTOR_ACTION *a, volatile MOTOR_ACTION *b )
 		{
@@ -233,8 +232,6 @@ do {									  \
 		} // end compare_actions()
 
 
-
-		
 		// ---------------------- Top-Level Behaviorals: ----------------------------------------------------------------------------------------------------- //
 		// --------------------------------------------------------------------------------------------------------------------------------------------------- //
 		void IR_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms )
@@ -356,11 +353,9 @@ do {									  \
 				{
 					// Led on sonar is used for debugging
 
-					unsigned long int usonic_time_us;
-					SWTIME usonic_time_ticks;
+					//unsigned long int usonic_time_us;		// Do we need these two?
+					//SWTIME usonic_time_ticks;				// They are not used.
 					float distance_cm;
-
-					STOPWATCH_open;
 
 					TMRSRVC_delay_ms(100);
 
@@ -368,14 +363,14 @@ do {									  \
 
 					pSensors->sonar_dist = distance_cm;
 
-					LCD_clear();
-					LCD_printf( "Dist = %.3f\n", distance_cm);
+					//LCD_clear();	// Good for sensor setup, but we want LCD to display the selected behavior
+					//LCD_printf( "Dist = %.3f\n", distance_cm);
 					TMRSRVC_delay_ms(100);
 
 					TIMER_SNOOZE(sense_timer);
 				}
 			}
-		}
+		} // end Sonar_Sense()
 
 		// ----------------------------------------------------------------------------------------------------------------------------------------- //
 		void Photo_init( volatile SENSOR_DATA *pSensors )
@@ -528,14 +523,13 @@ do {									  \
 				pAction->speed_L = base_speed*( 1 + right_minus_left );
 				pAction->speed_R = base_speed*( 1 - right_minus_left );
 			}
-		}
+		}  // end Light_Follow()
 
 		// --------------------------------------------------------------------------------------------------------------------------- //
 		void Sonar_Avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors)
 		{
 
-		}
-
+		} // end Sonar_Avoid()
 
 		// --------------------------------------------------------------------------------------------------------------------------- //
 		void act( volatile MOTOR_ACTION *pAction )
@@ -579,6 +573,7 @@ do {									  \
 			ADC_open();
 			ADC_set_VREF(ADC_VREF_AVCC);	// set ADC reference to 5V
 
+			STOPWATCH_open();
 			USONIC_open();
 			
 			// Reset the current motor action.
