@@ -349,7 +349,7 @@ do {									  \
 			}
 			else
 			{
-				if(TIMER_ALARM( sense_timer))
+				if( TIMER_ALARM( sense_timer ) )
 				{
 					// Led on sonar is used for debugging
 
@@ -363,8 +363,8 @@ do {									  \
 
 					pSensors->sonar_dist = distance_cm;
 
-					//LCD_clear();	// Good for sensor setup, but we want LCD to display the selected behavior
-					//LCD_printf( "Dist = %.3f\n", distance_cm);
+					LCD_clear();	// Good for sensor setup, but we want LCD to display the behavior
+					LCD_printf( "Dist = %.3f\n", distance_cm);
 					TMRSRVC_delay_ms(100);
 
 					TIMER_SNOOZE(sense_timer);
@@ -528,7 +528,15 @@ do {									  \
 		// --------------------------------------------------------------------------------------------------------------------------- //
 		void Sonar_Avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors)
 		{
-
+			float base_speed = 200;
+			float range_percent = 0;
+			
+			if ( pSensors->sonar_dist > 0 ) {
+				range_percent = 1 - pSensors->sonar_dist / 300;
+				
+				pAction->speed_L = base_speed*( 1 + range_percent );
+				pAction->speed_R = base_speed*( 1 - range_percent );
+			}
 		} // end Sonar_Avoid()
 
 		// --------------------------------------------------------------------------------------------------------------------------- //
