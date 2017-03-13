@@ -537,7 +537,7 @@ do {									  \
 			float base_speed = 200;
 			float range_percent = 0;
 			
-			if ( pSensors->sonar_dist > 0 ) {
+			if ( pSensors->sonar_dist > 0 && pSensors->sonar_dist < 100 ) {
 				
 				pAction->state = SONAR_AVOIDING;				
 				range_percent = 1 - pSensors->sonar_dist / 300;
