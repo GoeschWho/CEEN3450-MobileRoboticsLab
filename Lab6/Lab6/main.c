@@ -85,7 +85,7 @@ do {									  \
 
 		// Desc: The following custom enumerated type can be used to specify the
 		//       current state of the robot.  This parameter can be expanded upon
-		//       as complexity grows without intefering with the 'act()' function.
+		//       as complexity grows without interfering with the 'act()' function.
 		//		 It is a new type which can take the values of 0, 1, or 2 using
 		//		 the SYMBOLIC representations of STARTUP, EXPLORING, etc.
 		typedef enum ROBOT_STATE_TYPE {
@@ -93,7 +93,9 @@ do {									  \
 			STARTUP = 0,    // 'Startup' state -- initial state upon RESET.
 			CRUISING,       // 'Cruising' state -- the robot is 'roaming around'.
 			HOMING,		    // 'Homing' state -- the robot is 'homing towards the light'.
-			AVOIDING        // 'Avoiding' state -- the robot is avoiding a collision.
+			IR_AVOIDING,    // 'IR Avoiding' state -- the robot is avoiding a collision using IR.
+			SONAR_AVOIDING	// 'Sonar Avoiding' state -- the robot is avoiding a collision using sonar.
+			
 
 		} ROBOT_STATE;
 
@@ -186,12 +188,16 @@ do {									  \
 					LCD_printf( "CRUISING...\n" );
 					break;
 
-					case AVOIDING:
-					LCD_printf( "AVOIDING...\n");
+					case IR_AVOIDING:
+					LCD_printf( "IR AVOIDING...\n");
 					break;
 
 					case HOMING:
 					LCD_printf( "HOMING...\n");
+					break;
+					
+					case SONAR_AVOIDING:
+					LCD_printf( "SONAR AVOIDING...\n");
 					break;
 
 					default:
@@ -414,7 +420,7 @@ do {									  \
 			{
 
 				// Note that we're avoiding...
-				pAction->state = AVOIDING;
+				pAction->state = IR_AVOIDING;
 				LCD_clear();
 				LCD_printf( "AVOIDING...\n");
 
@@ -432,7 +438,7 @@ do {									  \
 						STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF );
 
 				// ... and set the motor action structure with variables to move forward.
-				pAction->state = AVOIDING;
+				pAction->state = IR_AVOIDING;
 				pAction->speed_L = 200;
 				pAction->speed_R = 200;
 				pAction->accel_L = 400;
@@ -441,7 +447,7 @@ do {									  \
 			} 
 			if( pSensors->right_IR == TRUE)
 			{
-				pAction->state = AVOIDING;
+				pAction->state = IR_AVOIDING;
 				LCD_clear();
 				LCD_printf( "AVOIDING...\n");
 
@@ -458,7 +464,7 @@ do {									  \
 						STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF);	
 
 				// ... and set the motor action structure with variables to move forward.
-				pAction->state = AVOIDING;
+				pAction->state = IR_AVOIDING;
 				pAction->speed_L = 200;
 				pAction->speed_R = 200;
 				pAction->accel_L = 400;
@@ -466,7 +472,7 @@ do {									  \
 			}
 			if( pSensors->right_IR == TRUE && pSensors->left_IR == TRUE)
 			{
-				pAction->state = AVOIDING;
+				pAction->state = IR_AVOIDING;
 				LCD_clear();
 				LCD_printf( "AVOIDING...\n");
 
@@ -484,7 +490,7 @@ do {									  \
 
 
 				// ... and set the motor action structure with variables to move forward.
-				pAction->state = AVOIDING;
+				pAction->state = IR_AVOIDING;
 				pAction->speed_L = 200;
 				pAction->speed_R = 200;
 				pAction->accel_L = 400;
@@ -532,6 +538,8 @@ do {									  \
 			float range_percent = 0;
 			
 			if ( pSensors->sonar_dist > 0 ) {
+				
+				pAction->state = SONAR_AVOIDING;				
 				range_percent = 1 - pSensors->sonar_dist / 300;
 				
 				pAction->speed_L = base_speed*( 1 + range_percent );
@@ -610,14 +618,13 @@ do {									  \
 				// (IR sense happens every 125ms).
 				IR_sense( &sensor_data, 125 );
 				Photo_sense( &sensor_data, 250 );
-				Sonar_sense( &sensor_data, 100 );
+				Sonar_sense( &sensor_data, 125 );
 				
 				// Behaviors.
 				Cruise( &action );
 				Light_Follow( &action, &sensor_data );
 				Sonar_Avoid( &action, &sensor_data);
 				IR_avoid( &action, &sensor_data );
-				
 				
 				// Perform the action of highest priority.
 				act( &action );
