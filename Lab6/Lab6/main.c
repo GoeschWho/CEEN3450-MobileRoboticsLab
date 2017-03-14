@@ -536,14 +536,15 @@ do {									  \
 		{
 			float base_speed = 200;
 			float range_percent = 0;
+			int turning_constant = 0.5;
 			
 			if ( pSensors->sonar_dist > 0 && pSensors->sonar_dist < 100 ) {
 				
 				pAction->state = SONAR_AVOIDING;				
 				range_percent = 1 - pSensors->sonar_dist / 300;
 				
-				pAction->speed_L = base_speed*( 1 + range_percent );
-				pAction->speed_R = base_speed*( 1 - range_percent );
+				pAction->speed_L = base_speed*( 1 + turning_constant * range_percent );
+				pAction->speed_R = base_speed*( 1 - turning_constant * range_percent );
 			}
 		} // end Sonar_Avoid()
 
