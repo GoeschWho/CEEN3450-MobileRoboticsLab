@@ -369,8 +369,8 @@ do {									  \
 
 					pSensors->sonar_dist = distance_cm;
 
-					LCD_clear();	// Good for sensor setup, but we want LCD to display the behavior
-					LCD_printf( "Dist = %.3f\n", distance_cm);
+					//LCD_clear();    //Good for sensor setup, but we want LCD to display the behavior
+					//LCD_printf( "Dist = %.3f\n", distance_cm);
 					TMRSRVC_delay_ms(100);
 
 					TIMER_SNOOZE(sense_timer);
@@ -534,9 +534,10 @@ do {									  \
 		// --------------------------------------------------------------------------------------------------------------------------- //
 		void Sonar_Avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors)
 		{
+
 			float base_speed = 200;
 			float range_percent = 0;
-			int turning_constant = 0.5;
+			int turning_constant = 0.99999999;
 			
 			if ( pSensors->sonar_dist > 0 && pSensors->sonar_dist < 100 ) {
 				
@@ -544,7 +545,7 @@ do {									  \
 				range_percent = 1 - pSensors->sonar_dist / 300;
 				
 				pAction->speed_L = base_speed*( 1 + turning_constant * range_percent );
-				pAction->speed_R = base_speed*( 1 - turning_constant * range_percent );
+				pAction->speed_R = base_speed*( 1 - range_percent );
 			}
 		} // end Sonar_Avoid()
 
@@ -590,7 +591,7 @@ do {									  \
 			ADC_open();
 			ADC_set_VREF(ADC_VREF_AVCC);	// set ADC reference to 5V
 
-			STOPWATCH_open();
+			
 			USONIC_open();
 			
 			// Reset the current motor action.
@@ -619,6 +620,7 @@ do {									  \
 				// (IR sense happens every 125ms).
 				IR_sense( &sensor_data, 125 );
 				Photo_sense( &sensor_data, 250 );
+				STOPWATCH_open();
 				Sonar_sense( &sensor_data, 125 );
 				
 				// Behaviors.
