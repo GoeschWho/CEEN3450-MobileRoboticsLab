@@ -415,8 +415,34 @@ do {									  \
 			// NOTE: Here we have NO CHOICE, but to do this 'ballistically'.
 			//       **NOTHING** else can happen while we're 'avoiding'.
 			
+			if( pSensors->right_IR == TRUE && pSensors->left_IR == TRUE)
+			{
+				pAction->state = IR_AVOIDING;
+				LCD_clear();
+				LCD_printf( "AVOIDING...\n");
+
+				STEPPER_stop(STEPPER_BOTH, STEPPER_BRK_OFF);
+
+				// Back up... further
+				STEPPER_move_stwt( STEPPER_BOTH,
+				STEPPER_REV, 500, 200, 400, STEPPER_BRK_OFF,
+				STEPPER_REV, 500, 200, 400, STEPPER_BRK_OFF );
+
+				// ... and turn LEFT ~120-deg
+				STEPPER_move_stwt( STEPPER_BOTH,
+				STEPPER_REV, 175, 200, 400, STEPPER_BRK_OFF,
+				STEPPER_FWD, 175, 200, 400, STEPPER_BRK_OFF);
+
+
+				// ... and set the motor action structure with variables to move forward.
+				pAction->state = IR_AVOIDING;
+				pAction->speed_L = 200;
+				pAction->speed_R = 200;
+				pAction->accel_L = 400;
+				pAction->accel_R = 400;
+			}
 			// If the LEFT sensor tripped...
-			if( pSensors->left_IR == TRUE )
+			else if( pSensors->left_IR == TRUE )
 			{
 
 				// Note that we're avoiding...
@@ -445,7 +471,7 @@ do {									  \
 				pAction->accel_R = 400;
 				
 			} 
-			if( pSensors->right_IR == TRUE)
+			else if( pSensors->right_IR == TRUE)
 			{
 				pAction->state = IR_AVOIDING;
 				LCD_clear();
@@ -469,33 +495,6 @@ do {									  \
 				pAction->speed_R = 200;
 				pAction->accel_L = 400;
 				pAction->accel_R = 400;
-			}
-			if( pSensors->right_IR == TRUE && pSensors->left_IR == TRUE)
-			{
-				pAction->state = IR_AVOIDING;
-				LCD_clear();
-				LCD_printf( "AVOIDING...\n");
-
-				STEPPER_stop(STEPPER_BOTH, STEPPER_BRK_OFF);
-
-				// Back up... further
-				STEPPER_move_stwt( STEPPER_BOTH,
-						STEPPER_REV, 500, 200, 400, STEPPER_BRK_OFF,
-						STEPPER_REV, 500, 200, 400, STEPPER_BRK_OFF );
-
-				// ... and turn LEFT ~120-deg
-				STEPPER_move_stwt( STEPPER_BOTH,
-						STEPPER_REV, 175, 200, 400, STEPPER_BRK_OFF,
-						STEPPER_FWD, 175, 200, 400, STEPPER_BRK_OFF);
-
-
-				// ... and set the motor action structure with variables to move forward.
-				pAction->state = IR_AVOIDING;
-				pAction->speed_L = 200;
-				pAction->speed_R = 200;
-				pAction->accel_L = 400;
-				pAction->accel_R = 400;
-
 			}
 		} // end avoid()
 
@@ -535,7 +534,7 @@ do {									  \
 		void Sonar_Avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors)
 		{
 			float base_speed = 200;
-			int trigger_distance = 100;
+			int trigger_distance = 85;
 			
 			if ( pSensors->sonar_dist > 0 && pSensors->sonar_dist < trigger_distance ) {
 				
