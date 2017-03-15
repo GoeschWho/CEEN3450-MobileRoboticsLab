@@ -369,8 +369,8 @@ do {									  \
 
 					pSensors->sonar_dist = distance_cm;
 
-					LCD_clear();	// Good for sensor setup, but we want LCD to display the behavior
-					LCD_printf( "Dist = %.3f\n", distance_cm);
+					//LCD_clear();    //Good for sensor setup, but we want LCD to display the behavior
+					//LCD_printf( "Dist = %.3f\n", distance_cm);
 					TMRSRVC_delay_ms(100);
 
 					TIMER_SNOOZE(sense_timer);
@@ -587,7 +587,7 @@ do {									  \
 			ADC_open();
 			ADC_set_VREF(ADC_VREF_AVCC);	// set ADC reference to 5V
 
-			STOPWATCH_open();
+			
 			USONIC_open();
 			
 			// Reset the current motor action.
@@ -616,6 +616,7 @@ do {									  \
 				// (IR sense happens every 125ms).
 				IR_sense( &sensor_data, 125 );
 				Photo_sense( &sensor_data, 250 );
+				STOPWATCH_open();
 				Sonar_sense( &sensor_data, 125 );
 				
 				// Behaviors.
