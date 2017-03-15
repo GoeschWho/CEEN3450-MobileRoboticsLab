@@ -1,7 +1,7 @@
 /* Auth: Megan Bird & Gary Miller
  * File: main.c
  * Course: CEEN-3450 – Mobile Robotics I – University of Nebraska-Lincoln
- * Lab: Lab 6
+ * Lab: Lab 5
  * Date: 3/8/2017
  * Desc: Behavior Based Control
  */
@@ -131,8 +131,6 @@ do {									  \
 			float left_photo_ambient;	// Holds the initial ambient value of the right photo-sensor
 			float right_photo_ambient;	// Holds the initial ambient value of the left photo-sensor
 
-			float sonar_dist;	// Holds the value for the sonar distance, in centimeters
-
 		} SENSOR_DATA;
 
 
@@ -146,7 +144,6 @@ do {									  \
 		// ---------------------------------
 		// ---------------------- Prototypes:
 		void IR_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms );
-		void Sonar_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms);
 		void Cruise( volatile MOTOR_ACTION *pAction );
 		void Light_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
 		void IR_avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
@@ -322,7 +319,7 @@ do {									  \
 					LED_toggle( LED_Red );		// for debugging, to make sure photo-sensing is occurring
 					ADC_SAMPLE sample;
 
-					ADC_set_channel(ADC_CHAN6);
+					ADC_set_channel(ADC_CHAN3);
 					sample = ADC_sample();
 					pSensors->left_photo_voltage = ((sample * 5.0f) / 1024);
 
@@ -337,52 +334,12 @@ do {									  \
 		}  // end Photo_sense()
 
 		// ----------------------------------------------------------------------------------------------------------------------------------------- //
-
-		void Sonar_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms )
-		{
-			static BOOL timer_started = FALSE;
-
-			static TIMEROBJ sense_timer;
-
-			if(timer_started == FALSE)
-			{
-				TMRSRVC_new( &sense_timer, TMRFLG_NOTIFY_FLAG, TMRTCM_RESTART, interval_ms);
-				timer_started = TRUE;
-			}
-			else
-			{
-				if(TIMER_ALARM( sense_timer))
-				{
-					// Led on sonar is used for debugging
-
-					unsigned long int usonic_time_us;
-					SWTIME usonic_time_ticks;
-					float distance_cm;
-
-					STOPWATCH_open;
-
-					TMRSRVC_delay_ms(100);
-
-					distance_cm = USONIC_DIST_CM(USONIC_ping());
-
-					pSensors->sonar_dist = distance_cm;
-
-					LCD_clear();
-					LCD_printf( "Dist = %.3f\n", distance_cm);
-					TMRSRVC_delay_ms(100);
-
-					TIMER_SNOOZE(sense_timer);
-				}
-			}
-		}
-
-		// ----------------------------------------------------------------------------------------------------------------------------------------- //
 		void Photo_init( volatile SENSOR_DATA *pSensors )
 		{
 			LED_toggle( LED_Red );		// for debugging, to make sure photo-sensing is occurring
 			ADC_SAMPLE sample;
 
-			ADC_set_channel(ADC_CHAN6);
+			ADC_set_channel(ADC_CHAN3);
 			sample = ADC_sample();
 			pSensors->left_photo_ambient = ((sample * 5.0f) / 1024);
 
@@ -530,13 +487,6 @@ do {									  \
 		}
 
 		// --------------------------------------------------------------------------------------------------------------------------- //
-		void Sonar_Avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors)
-		{
-
-		}
-
-
-		// --------------------------------------------------------------------------------------------------------------------------- //
 		void act( volatile MOTOR_ACTION *pAction )
 		{
 
@@ -577,9 +527,6 @@ do {									  \
 			STEPPER_open(); // Open the STEPPER subsystem module.
 			ADC_open();
 			ADC_set_VREF(ADC_VREF_AVCC);	// set ADC reference to 5V
-
-			STOPWATCH_open();
-			USONIC_open();
 			
 			// Reset the current motor action.
 			__RESET_ACTION( action );
