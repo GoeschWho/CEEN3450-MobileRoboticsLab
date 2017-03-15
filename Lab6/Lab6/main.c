@@ -534,18 +534,15 @@ do {									  \
 		// --------------------------------------------------------------------------------------------------------------------------- //
 		void Sonar_Avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors)
 		{
-
-			float base_speed = 200;
-			float range_percent = 0;
-			int turning_constant = 0.99999999;
+			float base_speed = 165;
+			int trigger_distance = 125;
 			
-			if ( pSensors->sonar_dist > 0 && pSensors->sonar_dist < 100 ) {
+			if ( pSensors->sonar_dist > 0 && pSensors->sonar_dist < trigger_distance ) {
 				
-				pAction->state = SONAR_AVOIDING;				
-				range_percent = 1 - pSensors->sonar_dist / 300;
+				pAction->state = SONAR_AVOIDING;
 				
-				pAction->speed_L = base_speed*( 1 + turning_constant * range_percent );
-				pAction->speed_R = base_speed*( 1 - range_percent );
+				pAction->speed_L = base_speed + ( trigger_distance - pSensors->sonar_dist );
+				pAction->speed_R = base_speed - ( trigger_distance - pSensors->sonar_dist );
 			}
 		} // end Sonar_Avoid()
 
