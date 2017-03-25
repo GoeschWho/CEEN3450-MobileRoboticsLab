@@ -544,6 +544,39 @@ do {									  \
 		} // end Sonar_Avoid()
 
 		// --------------------------------------------------------------------------------------------------------------------------- //
+		
+		void Wall_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors ) {
+			
+			float measDist = pSensors->sonar_dist;
+			float base_speed = 150;
+			float turning_speed = 30;
+			
+			// 15 in = 38.1 cm
+			// 10 in = 25.4 cm
+			// 20 in = 50.8 cm
+			float desiDist = 25.4 * 1.41;
+			float window = 2 * 1.41;
+			
+			if ( measDist < desiDist - window ) {
+				// turn right
+				pAction->speed_L = base_speed;
+				pAction->speed_R = base_speed + turning_speed;
+			}
+			else if ( measDist > desiDist + window ) {
+				// turn left
+				pAction->speed_L = base_speed + turning_speed;
+				pAction->speed_R = base_speed;
+			}
+			else {
+				// go straight
+				pAction->speed_L = base_speed;
+				pAction->speed_R = base_speed;
+			}
+			
+		} // end Wall_Follow()
+		
+		// --------------------------------------------------------------------------------------------------------------------------- //
+		
 		void act( volatile MOTOR_ACTION *pAction )
 		{
 
@@ -613,14 +646,15 @@ do {									  \
 				// Sense must always happen first.
 				// (IR sense happens every 125ms).
 				IR_sense( &sensor_data, 125 );
-				Photo_sense( &sensor_data, 250 );
+				//Photo_sense( &sensor_data, 250 );
 				STOPWATCH_open();
 				Sonar_sense( &sensor_data, 125 );
 				
 				// Behaviors.
 				Cruise( &action );
-				Light_Follow( &action, &sensor_data );
-				Sonar_Avoid( &action, &sensor_data);
+				//Light_Follow( &action, &sensor_data );
+				//Sonar_Avoid( &action, &sensor_data);
+				Wall_Follow( &action, &sensor_data);
 				IR_avoid( &action, &sensor_data );
 				
 				// Perform the action of highest priority.
