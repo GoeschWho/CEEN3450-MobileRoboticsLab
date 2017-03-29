@@ -94,9 +94,9 @@ do {									  \
 			CRUISING,       // 'Cruising' state -- the robot is 'roaming around'.
 			HOMING,		    // 'Homing' state -- the robot is 'homing towards the light'.
 			IR_AVOIDING,    // 'IR Avoiding' state -- the robot is avoiding a collision using IR.
-			SONAR_AVOIDING	// 'Sonar Avoiding' state -- the robot is avoiding a collision using sonar.
+			SONAR_AVOIDING,	// 'Sonar Avoiding' state -- the robot is avoiding a collision using sonar.
+			WALL_FOLLOWING	// 'Wall Following' state -- the bot is following the wall at a desired distance.
 			
-
 		} ROBOT_STATE;
 
 
@@ -153,12 +153,10 @@ do {									  \
 		void Light_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
 		void IR_avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
 		void Sonar_Avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors);
+		void Wall_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
 		void act( volatile MOTOR_ACTION *pAction );
 		void info_display( volatile MOTOR_ACTION *pAction );
 		BOOL compare_actions( volatile MOTOR_ACTION *a, volatile MOTOR_ACTION *b );
-
-
-
 
 		// ---------------------- Convenience Functions: -----------------------------------------------------------------------------------------------------//
 		// ---------------------------------------------------------------------------------------------------------------------------------------------------//
@@ -189,15 +187,19 @@ do {									  \
 					break;
 
 					case IR_AVOIDING:
-					LCD_printf( "IR AVOIDING...\n");
+					LCD_printf( "IR AVOIDING...\n" );
 					break;
 
 					case HOMING:
-					LCD_printf( "HOMING...\n");
+					LCD_printf( "HOMING...\n" );
 					break;
 					
 					case SONAR_AVOIDING:
-					LCD_printf( "SONAR AVOIDING...\n");
+					LCD_printf( "SONAR AVOIDING...\n" );
+					break;
+					
+					case WALL_FOLLOWING:
+					LCD_printf( "WALL FOLLOWING...\n" );
 					break;
 
 					default:
@@ -356,21 +358,17 @@ do {									  \
 			else
 			{
 				if( TIMER_ALARM( sense_timer ) )
-				{
-					// Led on sonar is used for debugging
-					
+				{					
 					float distance_cm;
 
-					TMRSRVC_delay_ms(100);
-
-					distance_cm = USONIC_DIST_CM(USONIC_ping());
+					distance_cm = USONIC_DIST_CM( USONIC_ping() );
 
 					pSensors->sonar_dist = distance_cm;
 
-					//LCD_clear();    //Good for sensor setup, but we want LCD to display the behavior
-					//LCD_printf( "Dist = %.3f\n", distance_cm);
-					TMRSRVC_delay_ms(100);
-
+					LCD_clear();    //Good for sensor setup, but we want LCD to display the behavior
+					LCD_printf( "Dist = %.3f\n", distance_cm);
+					
+					// Snooze the alarm so it can trigger again.
 					TIMER_SNOOZE(sense_timer);
 				}
 			}
@@ -421,16 +419,15 @@ do {									  \
 
 				STEPPER_stop(STEPPER_BOTH, STEPPER_BRK_OFF);
 
-				// Back up... further
+				// Back up...
 				STEPPER_move_stwt( STEPPER_BOTH,
-				STEPPER_REV, 500, 200, 400, STEPPER_BRK_OFF,
-				STEPPER_REV, 500, 200, 400, STEPPER_BRK_OFF );
-
-				// ... and turn LEFT ~120-deg
+				STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF,
+				STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF );
+				
+				// ... and turn LEFT ~90-deg
 				STEPPER_move_stwt( STEPPER_BOTH,
-				STEPPER_REV, 175, 200, 400, STEPPER_BRK_OFF,
-				STEPPER_FWD, 175, 200, 400, STEPPER_BRK_OFF);
-
+				STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF,
+				STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF);
 
 				// ... and set the motor action structure with variables to move forward.
 				pAction->state = IR_AVOIDING;
@@ -442,24 +439,21 @@ do {									  \
 			// If the LEFT sensor tripped...
 			else if( pSensors->left_IR == TRUE )
 			{
-
-				// Note that we're avoiding...
 				pAction->state = IR_AVOIDING;
 				LCD_clear();
 				LCD_printf( "AVOIDING...\n");
 
-				// STOP!
-				STEPPER_stop( STEPPER_BOTH, STEPPER_BRK_OFF );
-				
+				STEPPER_stop(STEPPER_BOTH, STEPPER_BRK_OFF);
+
 				// Back up...
 				STEPPER_move_stwt( STEPPER_BOTH,
 						STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF,
-						STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF );
-				
-				// ... and turn RIGHT ~90-deg.
+						STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF );	
+						
+				// ... and turn LEFT ~90-deg
 				STEPPER_move_stwt( STEPPER_BOTH,
-						STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF,
-						STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF );
+						STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF,
+						STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF);	
 
 				// ... and set the motor action structure with variables to move forward.
 				pAction->state = IR_AVOIDING;
@@ -549,29 +543,21 @@ do {									  \
 			
 			float measDist = pSensors->sonar_dist;
 			float base_speed = 150;
-			float turning_speed = 30;
 			
 			// 15 in = 38.1 cm
 			// 10 in = 25.4 cm
 			// 20 in = 50.8 cm
-			float desiDist = 25.4 * 1.41;
-			float window = 2 * 1.41;
+			float goalDist = (25.4 + 10.00) * 1.41;	
+			// multiply desired distance by sqrt(2) as sensor is at 45 degree angle to wall
+			// add offset for center of bot to wheels
 			
-			if ( measDist < desiDist - window ) {
-				// turn right
-				pAction->speed_L = base_speed;
-				pAction->speed_R = base_speed + turning_speed;
-			}
-			else if ( measDist > desiDist + window ) {
-				// turn left
-				pAction->speed_L = base_speed + turning_speed;
-				pAction->speed_R = base_speed;
-			}
-			else {
-				// go straight
-				pAction->speed_L = base_speed;
-				pAction->speed_R = base_speed;
-			}
+			float kp = 0.5;
+			float error = goalDist - measDist;
+			
+			pAction->state = WALL_FOLLOWING;
+			
+			pAction->speed_L = base_speed - ( kp * error );
+			pAction->speed_R = base_speed + ( kp * error );
 			
 		} // end Wall_Follow()
 		
@@ -612,13 +598,12 @@ do {									  \
 			volatile SENSOR_DATA sensor_data;
 			
 			// ** Open the needed modules.
+			//STOPWATCH_open();
 			LED_open();     // Open the LED subsystem module.
 			LCD_open();     // Open the LCD subsystem module.
 			STEPPER_open(); // Open the STEPPER subsystem module.
-			ADC_open();
-			ADC_set_VREF(ADC_VREF_AVCC);	// set ADC reference to 5V
-
-			
+			//ADC_open();
+			//ADC_set_VREF(ADC_VREF_AVCC);	// set ADC reference to 5V
 			USONIC_open();
 			
 			// Reset the current motor action.
@@ -631,7 +616,7 @@ do {									  \
 			TMRSRVC_delay( TMR_SECS( 3 ) );
 			
 			// Take initial ambient light sensor readings
-			Photo_init( &sensor_data );
+			//Photo_init( &sensor_data );
 			
 			// Clear the screen and enter the arbitration loop.
 			LCD_clear();
@@ -647,7 +632,6 @@ do {									  \
 				// (IR sense happens every 125ms).
 				IR_sense( &sensor_data, 125 );
 				//Photo_sense( &sensor_data, 250 );
-				STOPWATCH_open();
 				Sonar_sense( &sensor_data, 125 );
 				
 				// Behaviors.
