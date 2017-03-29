@@ -5467,7 +5467,7 @@ Disassembly of section .text:
     348c:	ce 01       	movw	r24, r28
     348e:	01 96       	adiw	r24, 0x01	; 1
     3490:	0e 94 c4 17 	call	0x2f88	; 0x2f88 <IR_sense>
-    3494:	68 ec       	ldi	r22, 0xC8	; 200
+    3494:	6d e7       	ldi	r22, 0x7D	; 125
     3496:	70 e0       	ldi	r23, 0x00	; 0
     3498:	ce 01       	movw	r24, r28
     349a:	01 96       	adiw	r24, 0x01	; 1

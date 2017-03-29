@@ -644,7 +644,7 @@ do {									  \
 				// (IR sense happens every 125ms).
 				IR_sense( &sensor_data, 125 );
 				//Photo_sense( &sensor_data, 250 );
-				Sonar_sense( &sensor_data, 200 );
+				Sonar_sense( &sensor_data, 125 );
 				
 				// Behaviors.
 				Cruise( &action );
