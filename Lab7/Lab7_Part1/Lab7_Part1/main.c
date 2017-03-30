@@ -1,9 +1,9 @@
 /* Auth: Megan Bird & Gary Miller
  * File: main.c
  * Course: CEEN-3450 – Mobile Robotics I – University of Nebraska-Lincoln
- * Lab: Lab 7
+ * Lab: Lab 7 - Part 1
  * Date: 3/8/2017
- * Desc: Wall Following
+ * Desc: Wall Following : 3-Level Controller
  */
 
 // Behavior-Based Control Skeleton code.
@@ -63,611 +63,609 @@ do {									  \
 	( motor_action ).accel_L = 0;         \
 	( motor_action ).accel_R = 0;         \
 	( motor_action ).state = STARTUP;     \
-	} while( 0 ) /* end __RESET_ACTION() */
+} while( 0 ) /* end __RESET_ACTION() */
 
 
 
-	// Desc: This macro-fuction translates action to motion -- it is a helper
-	//       macro-function.
-	#define __MOTOR_ACTION( motor_action )   \
-	do {                                     \
-		STEPPER_set_accel2( ( motor_action ).accel_L, ( motor_action ).accel_R ); \
-		STEPPER_runn( ( motor_action ).speed_L, ( motor_action ).speed_R );       \
-		} while( 0 ) /* end __MOTOR_ACTION() */
+// Desc: This macro-fuction translates action to motion -- it is a helper
+//       macro-function.
+#define __MOTOR_ACTION( motor_action )   \
+do {                                     \
+	STEPPER_set_accel2( ( motor_action ).accel_L, ( motor_action ).accel_R ); \
+	STEPPER_runn( ( motor_action ).speed_L, ( motor_action ).speed_R );       \
+} while( 0 ) /* end __MOTOR_ACTION() */
 
-		// Desc: This macro-function is used to set the action, in a more natural
-		//       manner (as if it was a function).
-
-
-
-		// ---------------------- Type Declarations:
+// Desc: This macro-function is used to set the action, in a more natural
+//       manner (as if it was a function).
 
 
-		// Desc: The following custom enumerated type can be used to specify the
-		//       current state of the robot.  This parameter can be expanded upon
-		//       as complexity grows without interfering with the 'act()' function.
-		//		 It is a new type which can take the values of 0, 1, or 2 using
-		//		 the SYMBOLIC representations of STARTUP, EXPLORING, etc.
-		typedef enum ROBOT_STATE_TYPE {
 
-			STARTUP = 0,    // 'Startup' state -- initial state upon RESET.
-			CRUISING,       // 'Cruising' state -- the robot is 'roaming around'.
-			HOMING,		    // 'Homing' state -- the robot is 'homing towards the light'.
-			IR_AVOIDING,    // 'IR Avoiding' state -- the robot is avoiding a collision using IR.
-			SONAR_AVOIDING,	// 'Sonar Avoiding' state -- the robot is avoiding a collision using sonar.
-			WALL_FOLLOWING	// 'Wall Following' state -- the bot is following the wall at a desired distance.
+// ---------------------- Type Declarations:
+
+
+// Desc: The following custom enumerated type can be used to specify the
+//       current state of the robot.  This parameter can be expanded upon
+//       as complexity grows without interfering with the 'act()' function.
+//		 It is a new type which can take the values of 0, 1, or 2 using
+//		 the SYMBOLIC representations of STARTUP, EXPLORING, etc.
+typedef enum ROBOT_STATE_TYPE {
+
+	STARTUP = 0,    // 'Startup' state -- initial state upon RESET.
+	CRUISING,       // 'Cruising' state -- the robot is 'roaming around'.
+	HOMING,		    // 'Homing' state -- the robot is 'homing towards the light'.
+	IR_AVOIDING,    // 'IR Avoiding' state -- the robot is avoiding a collision using IR.
+	SONAR_AVOIDING,	// 'Sonar Avoiding' state -- the robot is avoiding a collision using sonar.
+	WALL_FOLLOWING	// 'Wall Following' state -- the bot is following the wall at a desired distance.
 			
-		} ROBOT_STATE;
+} ROBOT_STATE;
 
 
 
 		
-		// Desc: Structure encapsulates a 'motor' action. It contains parameters that
-		//       controls the motors 'down the line' with information depicting the
-		//       current state of the robot.  The 'state' variable is useful to
-		//       'print' information on the LCD based on the current 'state', for
-		//       example.
-		typedef struct MOTOR_ACTION_TYPE {
+// Desc: Structure encapsulates a 'motor' action. It contains parameters that
+//       controls the motors 'down the line' with information depicting the
+//       current state of the robot.  The 'state' variable is useful to
+//       'print' information on the LCD based on the current 'state', for
+//       example.
+typedef struct MOTOR_ACTION_TYPE {
 
-			ROBOT_STATE state;              // Holds the current STATE of the robot.
-			signed short int speed_L;       // SPEED for LEFT  motor.
-			signed short int speed_R;       // SPEED for RIGHT motor.
-			unsigned short int accel_L;     // ACCELERATION for LEFT  motor.
-			unsigned short int accel_R;     // ACCELERATION for RIGHT motor.
+	ROBOT_STATE state;              // Holds the current STATE of the robot.
+	signed short int speed_L;       // SPEED for LEFT  motor.
+	signed short int speed_R;       // SPEED for RIGHT motor.
+	unsigned short int accel_L;     // ACCELERATION for LEFT  motor.
+	unsigned short int accel_R;     // ACCELERATION for RIGHT motor.
 			
-		} MOTOR_ACTION;
+} MOTOR_ACTION;
 
 
 		
-		// Desc: Structure encapsulates 'sensed' data.  Right now that only consists
-		//       of the state of the left & right IR sensors when queried.  You can
-		//       expand this structure and add additional custom fields as needed.
-		typedef struct SENSOR_DATA_TYPE {
+// Desc: Structure encapsulates 'sensed' data.  Right now that only consists
+//       of the state of the left & right IR sensors when queried.  You can
+//       expand this structure and add additional custom fields as needed.
+typedef struct SENSOR_DATA_TYPE {
 
-			BOOL left_IR;       // Holds the state of the left IR.
-			BOOL right_IR;      // Holds the state of the right IR.
+	BOOL left_IR;       // Holds the state of the left IR.
+	BOOL right_IR;      // Holds the state of the right IR.
 
-			float left_photo_voltage;	// Holds the value of the left photo-sensor
-			float right_photo_voltage;	// Holds the value of the right photo-sensor
+	float left_photo_voltage;	// Holds the value of the left photo-sensor
+	float right_photo_voltage;	// Holds the value of the right photo-sensor
 			
-			float left_photo_ambient;	// Holds the initial ambient value of the right photo-sensor
-			float right_photo_ambient;	// Holds the initial ambient value of the left photo-sensor
+	float left_photo_ambient;	// Holds the initial ambient value of the right photo-sensor
+	float right_photo_ambient;	// Holds the initial ambient value of the left photo-sensor
 
-			float sonar_dist;	// Holds the value for the sonar distance, in centimeters
+	float sonar_dist;	// Holds the value for the sonar distance, in centimeters
 
-		} SENSOR_DATA;
-
-
-		// ------------------------------
-		// ---------------------- Globals:
-		volatile MOTOR_ACTION action;  	// This variable holds parameters that determine
-		// the current action that is taking place.
-		// Here, a structure named "action" of type
-		// MOTOR_ACTION is declared.
-
-		// ---------------------------------
-		// ---------------------- Prototypes:
-		void IR_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms );
-		void Sonar_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms);
-		void Cruise( volatile MOTOR_ACTION *pAction );
-		void Light_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
-		void IR_avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
-		void Sonar_Avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors);
-		void act( volatile MOTOR_ACTION *pAction );
-		void info_display( volatile MOTOR_ACTION *pAction );
-		BOOL compare_actions( volatile MOTOR_ACTION *a, volatile MOTOR_ACTION *b );
+} SENSOR_DATA;
 
 
+// ------------------------------
+// ---------------------- Globals:
+volatile MOTOR_ACTION action;  	// This variable holds parameters that determine
+// the current action that is taking place.
+// Here, a structure named "action" of type
+// MOTOR_ACTION is declared.
+
+// ---------------------------------
+// ---------------------- Prototypes:
+void IR_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms );
+void Sonar_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms);
+void Cruise( volatile MOTOR_ACTION *pAction );
+void Light_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
+void IR_avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors );
+void Sonar_Avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors);
+void act( volatile MOTOR_ACTION *pAction );
+void info_display( volatile MOTOR_ACTION *pAction );
+BOOL compare_actions( volatile MOTOR_ACTION *a, volatile MOTOR_ACTION *b );
 
 
-		// ---------------------- Convenience Functions: -----------------------------------------------------------------------------------------------------//
-		// ---------------------------------------------------------------------------------------------------------------------------------------------------//
-		void info_display( volatile MOTOR_ACTION *pAction )
+
+
+// ---------------------- Convenience Functions: -----------------------------------------------------------------------------------------------------//
+// ---------------------------------------------------------------------------------------------------------------------------------------------------//
+void info_display( volatile MOTOR_ACTION *pAction )
+{
+
+	// NOTE:  We keep track of the 'previous' state to prevent the LCD
+	//        display from being needlessly written, if there's  nothing
+	//        new to display.  Otherwise, the screen will 'flicker' from
+	//        too many writes.
+	static ROBOT_STATE previous_state = STARTUP;
+
+	if ( ( pAction->state != previous_state ) || ( pAction->state == STARTUP ) )
+	{
+
+		LCD_clear();
+
+		//  Display information based on the current 'ROBOT STATE'.
+		switch( pAction->state )
 		{
 
-			// NOTE:  We keep track of the 'previous' state to prevent the LCD
-			//        display from being needlessly written, if there's  nothing
-			//        new to display.  Otherwise, the screen will 'flicker' from
-			//        too many writes.
-			static ROBOT_STATE previous_state = STARTUP;
+			case STARTUP:
+			LCD_printf( "STARTING...\n");
+			break;
 
-			if ( ( pAction->state != previous_state ) || ( pAction->state == STARTUP ) )
-			{
+			case CRUISING:
+			LCD_printf( "CRUISING...\n" );
+			break;
 
-				LCD_clear();
+			case IR_AVOIDING:
+			LCD_printf( "IR AVOIDING...\n" );
+			break;
 
-				//  Display information based on the current 'ROBOT STATE'.
-				switch( pAction->state )
-				{
-
-					case STARTUP:
-					LCD_printf( "STARTING...\n");
-					break;
-
-					case CRUISING:
-					LCD_printf( "CRUISING...\n" );
-					break;
-
-					case IR_AVOIDING:
-					LCD_printf( "IR AVOIDING...\n" );
-					break;
-
-					case HOMING:
-					LCD_printf( "HOMING...\n" );
-					break;
+			case HOMING:
+			LCD_printf( "HOMING...\n" );
+			break;
 					
-					case SONAR_AVOIDING:
-					LCD_printf( "SONAR AVOIDING...\n" );
-					break;
+			case SONAR_AVOIDING:
+			LCD_printf( "SONAR AVOIDING...\n" );
+			break;
 					
-					case WALL_FOLLOWING:
-					LCD_printf( "WALL FOLLOWING...\n" );
-					break;
+			case WALL_FOLLOWING:
+			LCD_printf( "WALL FOLLOWING...\n" );
+			break;
 
-					default:
-					LCD_printf( "Unknown state!\n" );
+			default:
+			LCD_printf( "Unknown state!\n" );
 
-				} // end switch()
+		} // end switch()
 
-				// Note the new state in effect.
-				previous_state = pAction->state;
+		// Note the new state in effect.
+		previous_state = pAction->state;
 
-			} // end if()
+	} // end if()
 
-		} // end info_display()
-
-
-		// ------------------------------------------------------------------------------------------------------------------------------------------------ //
-		BOOL compare_actions( volatile MOTOR_ACTION *a, volatile MOTOR_ACTION *b )
-		{
-
-			// NOTE:  The 'sole' purpose of this function is to
-			//        compare the 'elements' of MOTOR_ACTION structures
-			//        'a' and 'b' and see if 'any' differ.
-
-			// Assume these actions are equal.
-			BOOL rval = TRUE;
-
-			if ( ( a->state   != b->state )   ||
-			( a->speed_L != b->speed_L ) ||
-			( a->speed_R != b->speed_R ) ||
-			( a->accel_L != b->accel_L ) ||
-			( a->accel_R != b->accel_R ) )
-
-			rval = FALSE;
-
-			// Return comparison result.
-			return rval;
-
-		} // end compare_actions()
+} // end info_display()
 
 
-		// ---------------------- Top-Level Behaviorals: ----------------------------------------------------------------------------------------------------- //
-		// --------------------------------------------------------------------------------------------------------------------------------------------------- //
-		void IR_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms )
-		{
+// ------------------------------------------------------------------------------------------------------------------------------------------------ //
+BOOL compare_actions( volatile MOTOR_ACTION *a, volatile MOTOR_ACTION *b )
+{
 
-			// Sense must know if it's already sensing.
-			//
-			// NOTE: 'BOOL' is a custom data type offered by the CEENBoT API.
-			//
-			static BOOL timer_started = FALSE;
+	// NOTE:  The 'sole' purpose of this function is to
+	//        compare the 'elements' of MOTOR_ACTION structures
+	//        'a' and 'b' and see if 'any' differ.
+
+	// Assume these actions are equal.
+	BOOL rval = TRUE;
+
+	if ( ( a->state   != b->state )   ||
+	( a->speed_L != b->speed_L ) ||
+	( a->speed_R != b->speed_R ) ||
+	( a->accel_L != b->accel_L ) ||
+	( a->accel_R != b->accel_R ) )
+
+	rval = FALSE;
+
+	// Return comparison result.
+	return rval;
+
+} // end compare_actions()
+
+
+// ---------------------- Top-Level Behaviorals: ----------------------------------------------------------------------------------------------------- //
+// --------------------------------------------------------------------------------------------------------------------------------------------------- //
+void IR_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms )
+{
+
+	// Sense must know if it's already sensing.
+	//
+	// NOTE: 'BOOL' is a custom data type offered by the CEENBoT API.
+	//
+	static BOOL timer_started = FALSE;
 			
-			// The 'sense' timer is used to control how often gathering sensor
-			// data takes place.  The pace at which this happens needs to be
-			// controlled.  So we're forced to use TIMER OBJECTS along with the
-			// TIMER SERVICE.  It must be 'static' because the timer object must remain
-			// 'alive' even when it is out of scope -- otherwise the program will crash.
-			static TIMEROBJ sense_timer;
+	// The 'sense' timer is used to control how often gathering sensor
+	// data takes place.  The pace at which this happens needs to be
+	// controlled.  So we're forced to use TIMER OBJECTS along with the
+	// TIMER SERVICE.  It must be 'static' because the timer object must remain
+	// 'alive' even when it is out of scope -- otherwise the program will crash.
+	static TIMEROBJ sense_timer;
 			
-			// If this is the FIRST time that sense() is running, we need to start the
-			// sense timer.  We do this ONLY ONCE!
-			if ( timer_started == FALSE )
-			{
+	// If this is the FIRST time that sense() is running, we need to start the
+	// sense timer.  We do this ONLY ONCE!
+	if ( timer_started == FALSE )
+	{
 				
-				// Start the 'sense timer' to tick on every 'interval_ms'.
-				//
-				// NOTE:  You can adjust the delay value to suit your needs.
-				//
-				TMRSRVC_new( &sense_timer, TMRFLG_NOTIFY_FLAG, TMRTCM_RESTART,
-				interval_ms );
+		// Start the 'sense timer' to tick on every 'interval_ms'.
+		//
+		// NOTE:  You can adjust the delay value to suit your needs.
+		//
+		TMRSRVC_new( &sense_timer, TMRFLG_NOTIFY_FLAG, TMRTCM_RESTART,
+		interval_ms );
 				
-				// Mark that the timer has already been started.
-				timer_started = TRUE;
+		// Mark that the timer has already been started.
+		timer_started = TRUE;
 				
-			} // end if()
+	} // end if()
 			
-			// Otherwise, just do the usual thing and just 'sense'.
-			else
-			{
+	// Otherwise, just do the usual thing and just 'sense'.
+	else
+	{
 
-				// Only read the sensors when it is time to do so (e.g., every
-				// 125ms).  Otherwise, do nothing.
-				if ( TIMER_ALARM( sense_timer ) )
-				{
-
-					// NOTE: Just as a 'debugging' feature, let's also toggle the green LED
-					//       to know that this is working for sure.  The LED will only
-					//       toggle when 'it's time'.
-					LED_toggle( LED_Green );
-
-
-					// Read the left and right sensors, and store this
-					// data in the 'SENSOR_DATA' structure.
-					pSensors->left_IR  = ATTINY_get_IR_state( ATTINY_IR_LEFT  );
-					pSensors->right_IR = ATTINY_get_IR_state( ATTINY_IR_RIGHT );
-
-					
-
-					// NOTE: You can add more stuff to 'sense' here.
-					
-					// Snooze the alarm so it can trigger again.
-					TIMER_SNOOZE( sense_timer );
-					
-				} // end if()
-
-			} // end else.
-
-		} // end sense()
-
-		// ----------------------------------------------------------------------------------------------------------------------------------------- //
-		void Photo_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms )
+		// Only read the sensors when it is time to do so (e.g., every
+		// 125ms).  Otherwise, do nothing.
+		if ( TIMER_ALARM( sense_timer ) )
 		{
-			static BOOL timer_started = FALSE;   //  Check if photo-sense is already running
 
-			static TIMEROBJ sense_timer;         // Used to control the pace at which sensor data is gathered
+			// NOTE: Just as a 'debugging' feature, let's also toggle the green LED
+			//       to know that this is working for sure.  The LED will only
+			//       toggle when 'it's time'.
+			LED_toggle( LED_Green );
 
-			if( timer_started == FALSE )		// If this is first time sense() runs, start the photo-sense timer.  This happens only once!!!
-			{
-				TMRSRVC_new( &sense_timer, TMRFLG_NOTIFY_FLAG, TMRTCM_RESTART, interval_ms);	// Start the photo-sense timer, adjusted to tick every 'interval_ms'
 
-				timer_started = TRUE;			// Mark that timer is started
-			}
-			else
-			{
-				if( TIMER_ALARM( sense_timer ) )
-				{
-					LED_toggle( LED_Red );		// for debugging, to make sure photo-sensing is occurring
-					ADC_SAMPLE sample;
+			// Read the left and right sensors, and store this
+			// data in the 'SENSOR_DATA' structure.
+			pSensors->left_IR  = ATTINY_get_IR_state( ATTINY_IR_LEFT  );
+			pSensors->right_IR = ATTINY_get_IR_state( ATTINY_IR_RIGHT );
 
-					ADC_set_channel(ADC_CHAN6);
-					sample = ADC_sample();
-					pSensors->left_photo_voltage = ((sample * 5.0f) / 1024);
-
-					ADC_set_channel(ADC_CHAN4);
-					sample = ADC_sample();
-					pSensors->right_photo_voltage = ((sample * 5.0f) / 1024);
-
-					// Snooze the alarm so it can trigger again.
-					TIMER_SNOOZE( sense_timer );
-				}
-			}
-		}  // end Photo_sense()
-
-		// ----------------------------------------------------------------------------------------------------------------------------------------- //
-
-		void Sonar_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms )
-		{
-			static BOOL timer_started = FALSE;
-
-			static TIMEROBJ sense_timer;
-
-			if(timer_started == FALSE)
-			{
-				TMRSRVC_new( &sense_timer, TMRFLG_NOTIFY_FLAG, TMRTCM_RESTART, interval_ms);
-				timer_started = TRUE;
-			}
-			else
-			{
-				if( TIMER_ALARM( sense_timer ) )
-				{
-					// Led on sonar is used for debugging
 					
-					float distance_cm;
 
-					TMRSRVC_delay_ms(100);
+			// NOTE: You can add more stuff to 'sense' here.
+					
+			// Snooze the alarm so it can trigger again.
+			TIMER_SNOOZE( sense_timer );
+					
+		} // end if()
 
-					distance_cm = USONIC_DIST_CM(USONIC_ping());
+	} // end else.
 
-					pSensors->sonar_dist = distance_cm;
+} // end sense()
 
-					//LCD_clear();    //Good for sensor setup, but we want LCD to display the behavior
-					//LCD_printf( "Dist = %.3f\n", distance_cm);
-					TMRSRVC_delay_ms(100);
+// ----------------------------------------------------------------------------------------------------------------------------------------- //
+void Photo_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms )
+{
+	static BOOL timer_started = FALSE;   //  Check if photo-sense is already running
 
-					TIMER_SNOOZE(sense_timer);
-				}
-			}
-		} // end Sonar_Sense()
+	static TIMEROBJ sense_timer;         // Used to control the pace at which sensor data is gathered
 
-		// ----------------------------------------------------------------------------------------------------------------------------------------- //
-		void Photo_init( volatile SENSOR_DATA *pSensors )
+	if( timer_started == FALSE )		// If this is first time sense() runs, start the photo-sense timer.  This happens only once!!!
+	{
+		TMRSRVC_new( &sense_timer, TMRFLG_NOTIFY_FLAG, TMRTCM_RESTART, interval_ms);	// Start the photo-sense timer, adjusted to tick every 'interval_ms'
+
+		timer_started = TRUE;			// Mark that timer is started
+	}
+	else
+	{
+		if( TIMER_ALARM( sense_timer ) )
 		{
 			LED_toggle( LED_Red );		// for debugging, to make sure photo-sensing is occurring
 			ADC_SAMPLE sample;
 
 			ADC_set_channel(ADC_CHAN6);
 			sample = ADC_sample();
-			pSensors->left_photo_ambient = ((sample * 5.0f) / 1024);
+			pSensors->left_photo_voltage = ((sample * 5.0f) / 1024);
 
 			ADC_set_channel(ADC_CHAN4);
 			sample = ADC_sample();
-			pSensors->right_photo_ambient = ((sample * 5.0f) / 1024);
-		} // end Photo_init()
+			pSensors->right_photo_voltage = ((sample * 5.0f) / 1024);
 
-		// ----------------------------------------------------------------------------------------------------------------------------------------- //
-		void Cruise( volatile MOTOR_ACTION *pAction )
+			// Snooze the alarm so it can trigger again.
+			TIMER_SNOOZE( sense_timer );
+		}
+	}
+}  // end Photo_sense()
+
+// ----------------------------------------------------------------------------------------------------------------------------------------- //
+
+void Sonar_sense( volatile SENSOR_DATA *pSensors, TIMER16 interval_ms )
+{
+	static BOOL timer_started = FALSE;
+
+	static TIMEROBJ sense_timer;
+
+	if(timer_started == FALSE)
+	{
+		TMRSRVC_new( &sense_timer, TMRFLG_NOTIFY_FLAG, TMRTCM_RESTART, interval_ms);
+		timer_started = TRUE;
+	}
+	else
+	{
+		if( TIMER_ALARM( sense_timer ) )
 		{
-			// Nothing to do, but set the parameters to explore.  'act()' will do
-			// the rest down the line.
-			pAction->state = CRUISING;
-			pAction->speed_L = 200;
-			pAction->speed_R = 200;
-			pAction->accel_L = 400;
-			pAction->accel_R = 400;
+			// Led on sonar is used for debugging
+					
+			float distance_cm;
+
+			TMRSRVC_delay_ms(100);
+
+			distance_cm = USONIC_DIST_CM(USONIC_ping());
+
+			pSensors->sonar_dist = distance_cm;
+
+			//LCD_clear();    //Good for sensor setup, but we want LCD to display the behavior
+			//LCD_printf( "Dist = %.3f\n", distance_cm);
+			TMRSRVC_delay_ms(100);
+
+			TIMER_SNOOZE(sense_timer);
+		}
+	}
+} // end Sonar_Sense()
+
+// ----------------------------------------------------------------------------------------------------------------------------------------- //
+void Photo_init( volatile SENSOR_DATA *pSensors )
+{
+	LED_toggle( LED_Red );		// for debugging, to make sure photo-sensing is occurring
+	ADC_SAMPLE sample;
+
+	ADC_set_channel(ADC_CHAN6);
+	sample = ADC_sample();
+	pSensors->left_photo_ambient = ((sample * 5.0f) / 1024);
+
+	ADC_set_channel(ADC_CHAN4);
+	sample = ADC_sample();
+	pSensors->right_photo_ambient = ((sample * 5.0f) / 1024);
+} // end Photo_init()
+
+// ----------------------------------------------------------------------------------------------------------------------------------------- //
+void Cruise( volatile MOTOR_ACTION *pAction )
+{
+	// Nothing to do, but set the parameters to explore.  'act()' will do
+	// the rest down the line.
+	pAction->state = CRUISING;
+	pAction->speed_L = 200;
+	pAction->speed_R = 200;
+	pAction->accel_L = 400;
+	pAction->accel_R = 400;
 			
-			// That's it -- let 'act()' do the rest.
+	// That's it -- let 'act()' do the rest.
 			
-		} // end Cruise()
+} // end Cruise()
 
-		// ------------------------------------------------------------------------------------------------------------------------------------------ //
-		void IR_avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors )
-		{
+// ------------------------------------------------------------------------------------------------------------------------------------------ //
+void IR_avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors )
+{
 
-			// NOTE: Here we have NO CHOICE, but to do this 'ballistically'.
-			//       **NOTHING** else can happen while we're 'avoiding'.
+	// NOTE: Here we have NO CHOICE, but to do this 'ballistically'.
+	//       **NOTHING** else can happen while we're 'avoiding'.
 			
-			if( pSensors->right_IR == TRUE && pSensors->left_IR == TRUE)
-			{
-				pAction->state = IR_AVOIDING;
-				LCD_clear();
-				LCD_printf( "AVOIDING...\n");
+	if( pSensors->right_IR == TRUE && pSensors->left_IR == TRUE)
+	{
+		pAction->state = IR_AVOIDING;
+		LCD_clear();
+		LCD_printf( "AVOIDING...\n");
 
-				STEPPER_stop(STEPPER_BOTH, STEPPER_BRK_OFF);
+		STEPPER_stop(STEPPER_BOTH, STEPPER_BRK_OFF);
 
-				// Back up... further
-				STEPPER_move_stwt( STEPPER_BOTH,
-				STEPPER_REV, 500, 200, 400, STEPPER_BRK_OFF,
-				STEPPER_REV, 500, 200, 400, STEPPER_BRK_OFF );
+		// Back up... further
+		STEPPER_move_stwt( STEPPER_BOTH,
+		STEPPER_REV, 500, 200, 400, STEPPER_BRK_OFF,
+		STEPPER_REV, 500, 200, 400, STEPPER_BRK_OFF );
 
-				// ... and turn LEFT ~120-deg
-				STEPPER_move_stwt( STEPPER_BOTH,
-				STEPPER_REV, 175, 200, 400, STEPPER_BRK_OFF,
-				STEPPER_FWD, 175, 200, 400, STEPPER_BRK_OFF);
+		// ... and turn LEFT ~120-deg
+		STEPPER_move_stwt( STEPPER_BOTH,
+		STEPPER_REV, 175, 200, 400, STEPPER_BRK_OFF,
+		STEPPER_FWD, 175, 200, 400, STEPPER_BRK_OFF);
 
 
-				// ... and set the motor action structure with variables to move forward.
-				pAction->state = IR_AVOIDING;
-				pAction->speed_L = 200;
-				pAction->speed_R = 200;
-				pAction->accel_L = 400;
-				pAction->accel_R = 400;
-			}
-			// If the LEFT sensor tripped...
-			else if( pSensors->left_IR == TRUE )
-			{
+		// ... and set the motor action structure with variables to move forward.
+		pAction->state = IR_AVOIDING;
+		pAction->speed_L = 200;
+		pAction->speed_R = 200;
+		pAction->accel_L = 400;
+		pAction->accel_R = 400;
+	}
+	// If the LEFT sensor tripped...
+	else if( pSensors->left_IR == TRUE )
+	{
 
-				// Note that we're avoiding...
-				pAction->state = IR_AVOIDING;
-				LCD_clear();
-				LCD_printf( "AVOIDING...\n");
+		// Note that we're avoiding...
+		pAction->state = IR_AVOIDING;
+		LCD_clear();
+		LCD_printf( "AVOIDING...\n");
 
-				// STOP!
-				STEPPER_stop( STEPPER_BOTH, STEPPER_BRK_OFF );
+		// STOP!
+		STEPPER_stop( STEPPER_BOTH, STEPPER_BRK_OFF );
 				
-				// Back up...
-				STEPPER_move_stwt( STEPPER_BOTH,
-						STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF,
-						STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF );
+		// Back up...
+		STEPPER_move_stwt( STEPPER_BOTH,
+				STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF,
+				STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF );
 				
-				// ... and turn RIGHT ~90-deg.
-				STEPPER_move_stwt( STEPPER_BOTH,
-						STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF,
-						STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF );
+		// ... and turn RIGHT ~90-deg.
+		STEPPER_move_stwt( STEPPER_BOTH,
+				STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF,
+				STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF );
 
-				// ... and set the motor action structure with variables to move forward.
-				pAction->state = IR_AVOIDING;
-				pAction->speed_L = 200;
-				pAction->speed_R = 200;
-				pAction->accel_L = 400;
-				pAction->accel_R = 400;
+		// ... and set the motor action structure with variables to move forward.
+		pAction->state = IR_AVOIDING;
+		pAction->speed_L = 200;
+		pAction->speed_R = 200;
+		pAction->accel_L = 400;
+		pAction->accel_R = 400;
 				
-			} 
-			else if( pSensors->right_IR == TRUE)
-			{
-				pAction->state = IR_AVOIDING;
-				LCD_clear();
-				LCD_printf( "AVOIDING...\n");
+	} 
+	else if( pSensors->right_IR == TRUE)
+	{
+		pAction->state = IR_AVOIDING;
+		LCD_clear();
+		LCD_printf( "AVOIDING...\n");
 
-				STEPPER_stop(STEPPER_BOTH, STEPPER_BRK_OFF);
+		STEPPER_stop(STEPPER_BOTH, STEPPER_BRK_OFF);
 
-				// Back up...
-				STEPPER_move_stwt( STEPPER_BOTH,
-						STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF,
-						STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF );	
+		// Back up...
+		STEPPER_move_stwt( STEPPER_BOTH,
+				STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF,
+				STEPPER_REV, 250, 200, 400, STEPPER_BRK_OFF );	
 						
-				// ... and turn LEFT ~90-deg
-				STEPPER_move_stwt( STEPPER_BOTH,
-						STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF,
-						STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF);	
+		// ... and turn LEFT ~90-deg
+		STEPPER_move_stwt( STEPPER_BOTH,
+				STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF,
+				STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF);	
 
-				// ... and set the motor action structure with variables to move forward.
-				pAction->state = IR_AVOIDING;
-				pAction->speed_L = 200;
-				pAction->speed_R = 200;
-				pAction->accel_L = 400;
-				pAction->accel_R = 400;
-			}
-		} // end avoid()
+		// ... and set the motor action structure with variables to move forward.
+		pAction->state = IR_AVOIDING;
+		pAction->speed_L = 200;
+		pAction->speed_R = 200;
+		pAction->accel_L = 400;
+		pAction->accel_R = 400;
+	}
+} // end avoid()
 
-		// --------------------------------------------------------------------------------------------------------------------------- //
-		void Light_Follow(volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors)
-		{
-			float light_min = (( 5 - (pSensors->left_photo_ambient + pSensors->right_photo_ambient)/2 ) * 0.2 )  
-								+ ((pSensors->left_photo_ambient + pSensors->right_photo_ambient)/2);
-			float base_speed = 200;
+// --------------------------------------------------------------------------------------------------------------------------- //
+void Light_Follow(volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors)
+{
+	float light_min = (( 5 - (pSensors->left_photo_ambient + pSensors->right_photo_ambient)/2 ) * 0.2 )  
+						+ ((pSensors->left_photo_ambient + pSensors->right_photo_ambient)/2);
+	float base_speed = 200;
 
-			float adjusted_left = pSensors->left_photo_voltage - pSensors->left_photo_ambient;
-			float adjusted_right = pSensors->right_photo_voltage - pSensors->right_photo_ambient;
+	float adjusted_left = pSensors->left_photo_voltage - pSensors->left_photo_ambient;
+	float adjusted_right = pSensors->right_photo_voltage - pSensors->right_photo_ambient;
 			
-			// minimum adjusted value is 0
-			if ( adjusted_right < 0 ) {
-				adjusted_right = 0;
-			}
-			if ( adjusted_left < 0 ) {
-				adjusted_left = 0;
-			}
+	// minimum adjusted value is 0
+	if ( adjusted_right < 0 ) {
+		adjusted_right = 0;
+	}
+	if ( adjusted_left < 0 ) {
+		adjusted_left = 0;
+	}
 			
-			float percentage_left = adjusted_left / ( 5 - pSensors->left_photo_ambient);
-			float percentage_right = adjusted_right / ( 5 - pSensors->right_photo_ambient);
+	float percentage_left = adjusted_left / ( 5 - pSensors->left_photo_ambient);
+	float percentage_right = adjusted_right / ( 5 - pSensors->right_photo_ambient);
 			
-			float right_minus_left = percentage_right - percentage_left;
+	float right_minus_left = percentage_right - percentage_left;
 			
-			if ( (pSensors->left_photo_voltage + pSensors->right_photo_voltage)/2 > light_min)
-			{
-				pAction->state = HOMING;
+	if ( (pSensors->left_photo_voltage + pSensors->right_photo_voltage)/2 > light_min)
+	{
+		pAction->state = HOMING;
 
-				pAction->speed_L = base_speed*( 1 + right_minus_left );
-				pAction->speed_R = base_speed*( 1 - right_minus_left );
-			}
-		}  // end Light_Follow()
+		pAction->speed_L = base_speed*( 1 + right_minus_left );
+		pAction->speed_R = base_speed*( 1 - right_minus_left );
+	}
+}  // end Light_Follow()
 
-		// --------------------------------------------------------------------------------------------------------------------------- //
-		void Sonar_Avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors)
-		{
-			float base_speed = 200;
-			int trigger_distance = 85;
+// --------------------------------------------------------------------------------------------------------------------------- //
+void Sonar_Avoid( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors)
+{
+	float base_speed = 200;
+	int trigger_distance = 85;
 			
-			if ( pSensors->sonar_dist > 0 && pSensors->sonar_dist < trigger_distance ) {
+	if ( pSensors->sonar_dist > 0 && pSensors->sonar_dist < trigger_distance ) {
 				
-				pAction->state = SONAR_AVOIDING;				
+		pAction->state = SONAR_AVOIDING;				
 				
-				pAction->speed_L = base_speed + ( trigger_distance - pSensors->sonar_dist );
-				pAction->speed_R = base_speed - ( trigger_distance - pSensors->sonar_dist );
-			}
-		} // end Sonar_Avoid()
+		pAction->speed_L = base_speed + ( trigger_distance - pSensors->sonar_dist );
+		pAction->speed_R = base_speed - ( trigger_distance - pSensors->sonar_dist );
+	}
+} // end Sonar_Avoid()
 
-		// --------------------------------------------------------------------------------------------------------------------------- //
+// --------------------------------------------------------------------------------------------------------------------------- //
 		
-			void Wall_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors ) {
+void Wall_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors ) {
 					
-				float measDist = pSensors->sonar_dist;
-				float base_speed = 150;
-				float turning_speed = 30;
+	float measDist = pSensors->sonar_dist;
+	float base_speed = 150;
+	float turning_speed = 30;
 					
-				// 15 in = 38.1 cm
-				// 10 in = 25.4 cm
-				// 20 in = 50.8 cm
-				float desiDist = 25.4 * 1.41;
-				float window = 2 * 1.41;
+	// 15 in = 38.1 cm
+	// 10 in = 25.4 cm
+	// 20 in = 50.8 cm
+	float desiDist = 25.4 * 1.41;
+	float window = 2 * 1.41;
 					
-				if ( measDist < desiDist - window ) {
-					// turn right
-					pAction->speed_L = base_speed;
-					pAction->speed_R = base_speed + turning_speed;
-				}
-				else if ( measDist > desiDist + window ) {
-					// turn left
-					pAction->speed_L = base_speed + turning_speed;
-					pAction->speed_R = base_speed;
-				}
-				else {
-					// go straight
-					pAction->speed_L = base_speed;
-					pAction->speed_R = base_speed;
-				}
+	if ( measDist < desiDist - window ) {
+		// turn left
+		pAction->speed_L = base_speed;
+		pAction->speed_R = base_speed + turning_speed;
+	}
+	else if ( measDist > desiDist + window ) {
+		// turn right
+		pAction->speed_L = base_speed + turning_speed;
+		pAction->speed_R = base_speed;
+	}
+	else {
+		// go straight
+		pAction->speed_L = base_speed;
+		pAction->speed_R = base_speed;
+	}
 					
-			} // end Wall_Follow()
+} // end Wall_Follow()
 		
-		// --------------------------------------------------------------------------------------------------------------------------- //
+// --------------------------------------------------------------------------------------------------------------------------- //
 		
-		void act( volatile MOTOR_ACTION *pAction )
-		{
+void act( volatile MOTOR_ACTION *pAction )
+{
 
-			// 'act()' always keeps track of the PREVIOUS action to determine
-			// if a new action must be executed, and to execute such action ONLY
-			// if any parameters in the 'MOTOR_ACTION' structure have changed.
-			// This is necessary to prevent motor 'jitter'.
-			static MOTOR_ACTION previous_action = {
+	// 'act()' always keeps track of the PREVIOUS action to determine
+	// if a new action must be executed, and to execute such action ONLY
+	// if any parameters in the 'MOTOR_ACTION' structure have changed.
+	// This is necessary to prevent motor 'jitter'.
+	static MOTOR_ACTION previous_action = {
 
-				STARTUP, 0, 0, 0, 0
+		STARTUP, 0, 0, 0, 0
 
-			};
+	};
 
-			if( compare_actions( pAction, &previous_action ) == FALSE )
-			{
+	if( compare_actions( pAction, &previous_action ) == FALSE )
+	{
 
-				// Perform the action.  Just call the 'free-running' version
-				// of stepper move function and feed these same parameters.
-				__MOTOR_ACTION( *pAction );
+		// Perform the action.  Just call the 'free-running' version
+		// of stepper move function and feed these same parameters.
+		__MOTOR_ACTION( *pAction );
 
-				// Save the previous action.
-				previous_action = *pAction;
+		// Save the previous action.
+		previous_action = *pAction;
 
-			} // end if()
+	} // end if()
 			
-		} // end act()
+} // end act()
 
-		// ---------------------- CBOT Main ---------------------------------------------------------------------------------------------- //
-		// ------------------------------------------------------------------------------------------------------------------------------- //
-		void CBOT_main( void )
-		{
+// ---------------------- CBOT Main ---------------------------------------------------------------------------------------------- //
+// ------------------------------------------------------------------------------------------------------------------------------- //
+void CBOT_main( void )
+{
 
-			volatile SENSOR_DATA sensor_data;
+	volatile SENSOR_DATA sensor_data;
 			
-			// ** Open the needed modules.
-			LED_open();     // Open the LED subsystem module.
-			LCD_open();     // Open the LCD subsystem module.
-			STEPPER_open(); // Open the STEPPER subsystem module.
-			ADC_open();
-			ADC_set_VREF(ADC_VREF_AVCC);	// set ADC reference to 5V
-
+	// ** Open the needed modules.
+	LED_open();     // Open the LED subsystem module.
+	LCD_open();     // Open the LCD subsystem module.
+	STEPPER_open(); // Open the STEPPER subsystem module.
+	//ADC_open();
+	//ADC_set_VREF(ADC_VREF_AVCC);	// set ADC reference to 5V
+	USONIC_open();
 			
-			USONIC_open();
+	// Reset the current motor action.
+	__RESET_ACTION( action );
 			
-			// Reset the current motor action.
-			__RESET_ACTION( action );
+	// Notify program is about to start.
+	LCD_printf( "Starting...\n" );
 			
-			// Notify program is about to start.
-			LCD_printf( "Starting...\n" );
+	// Wait 3 seconds or so.
+	TMRSRVC_delay( TMR_SECS( 3 ) );
 			
-			// Wait 3 seconds or so.
-			TMRSRVC_delay( TMR_SECS( 3 ) );
+	// Take initial ambient light sensor readings
+	Photo_init( &sensor_data );
 			
-			// Take initial ambient light sensor readings
-			Photo_init( &sensor_data );
+	// Clear the screen and enter the arbitration loop.
+	LCD_clear();
 			
-			// Clear the screen and enter the arbitration loop.
-			LCD_clear();
-			
-			// Enter the 'arbitration' while() loop -- it is important that NONE
-			// of the behavior functions listed in the arbitration loop BLOCK!
-			// Behaviors are listed in increasing order of priority, with the last
-			// behavior having the greatest priority (because it has the last 'say'
-			// regarding motor action (or any action)).
-			while( 1 )
-			{
-				// Sense must always happen first.
-				// (IR sense happens every 125ms).
-				IR_sense( &sensor_data, 125 );
-				//Photo_sense( &sensor_data, 250 );
-				Sonar_sense( &sensor_data, 125 );
+	// Enter the 'arbitration' while() loop -- it is important that NONE
+	// of the behavior functions listed in the arbitration loop BLOCK!
+	// Behaviors are listed in increasing order of priority, with the last
+	// behavior having the greatest priority (because it has the last 'say'
+	// regarding motor action (or any action)).
+	while( 1 )
+	{
+		// Sense must always happen first.
+		// (IR sense happens every 125ms).
+		IR_sense( &sensor_data, 125 );
+		//Photo_sense( &sensor_data, 250 );
+		Sonar_sense( &sensor_data, 125 );
 				
-				// Behaviors.
-				Cruise( &action );
-				//Light_Follow( &action, &sensor_data );
-				//Sonar_Avoid( &action, &sensor_data);
-				Wall_Follow( &action, &sensor_data);
-				IR_avoid( &action, &sensor_data );
+		// Behaviors.
+		Cruise( &action );
+		//Light_Follow( &action, &sensor_data );
+		//Sonar_Avoid( &action, &sensor_data);
+		Wall_Follow( &action, &sensor_data);
+		IR_avoid( &action, &sensor_data );
 				
-				// Perform the action of highest priority.
-				act( &action );
+		// Perform the action of highest priority.
+		act( &action );
 
-				// Real-time display info, should happen last, if possible (
-				// except for 'ballistic' behaviors).  Technically this is sort of
-				// 'optional' as it does not constitute a 'behavior'.
-				info_display( &action );
+		// Real-time display info, should happen last, if possible (
+		// except for 'ballistic' behaviors).  Technically this is sort of
+		// 'optional' as it does not constitute a 'behavior'.
+		info_display( &action );
 				
-			} // end while()
+	} // end while()
 			
-		} // end CBOT_main()
+} // end CBOT_main()
