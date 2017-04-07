@@ -1,9 +1,9 @@
 /* Auth: Megan Bird & Gary Miller
  * File: main.c
  * Course: CEEN-3450 – Mobile Robotics I – University of Nebraska-Lincoln
- * Lab: Lab 8 - Part 1
+ * Lab: Lab 8 - Part 2
  * Date: 3/29/2017
- * Desc: Line Following : PD Controller
+ * Desc: Line Following : PD Controller with Line Finding
  */
 
 // Behavior-Based Control Skeleton code.
