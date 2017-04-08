@@ -139,6 +139,7 @@ typedef struct SENSOR_DATA_TYPE {
 
 } SENSOR_DATA;
 
+typedef enum { false, true} bool;
 
 // ------------------------------
 // ---------------------- Globals:
@@ -440,8 +441,8 @@ void Cruise( volatile MOTOR_ACTION *pAction )
 	// Nothing to do, but set the parameters to explore.  'act()' will do
 	// the rest down the line.
 	pAction->state = CRUISING;
-	pAction->speed_L = 200;
-	pAction->speed_R = 200;
+	pAction->speed_L = 150;
+	pAction->speed_R = 150;
 	pAction->accel_L = 400;
 	pAction->accel_R = 400;
 			
@@ -623,53 +624,47 @@ void Line_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors
 	// Voltages near VCC indicate low reflectance.
 	// Voltages near GND indicate high reflectance.
 	float leftVoltage = pSensors->left_line_voltage;
-	float rightVoltage = pSensors->right_line_voltage - 1.5;
+	float rightVoltage = pSensors->right_line_voltage;
 	
-	//float base_speed = 150;	// worked
-	//--
-	//float base_speed = 260;	// worked 3 complete loops both directions
-	//--
-	//float base_speed = 320;	// Also works
-	//--
-	float base_speed = 350;
-
+	float base_speed = 150;
+	
+	float line_threshold = 1.5;
+	float exit_threshold = 3.0;
 		
 	int turn = 0;
-		
-	//float kp = 40;
-	//float kd = 30;
-	//--
-	//float kp = 80;
-	//float kd = 120;
-	//--
-	//float kp = 110;
-	//float kd = 200;
-	//--
-	float kp = 120;
-	float kd = 220;
+	
+	float kp = 70;
+	float kd = 100;	
+	
+	static bool following = false;
 
+	if ( ( leftVoltage > exit_threshold ) && ( rightVoltage > exit_threshold ) ) {
+		following = false;
+	}
+	if ( ( leftVoltage < line_threshold ) && ( rightVoltage - 1.5 < line_threshold ) ) {
+		following = true;
+	}
 	
-	// Use difference between two sensor to determine turning speed and direction	
-	float error = leftVoltage - rightVoltage;
+	if ( following ) {
 		
-	float derivative = 0;
-	static float lastError = 0;
+		pAction->state = LINE_FOLLOWING;
 		
-	derivative = error - lastError;
+		rightVoltage -= 1.5;		
+		float error = leftVoltage - rightVoltage;
 		
-	pAction->state = LINE_FOLLOWING;
+		float derivative = 0;
+		static float lastError = 0;
 		
-	turn = kp * error + kd * derivative;
+		derivative = error - lastError;
 		
-	pAction->speed_L = base_speed + turn;
-	pAction->speed_R = base_speed - turn;
-	
-	//LCD_clear();
-	//LCD_printf( "Left:  %f\n", leftVoltage );
-	//LCD_printf( "Right: %f\n", rightVoltage );
-	//LCD_printf( "Error: %f\n", error );
+		// Use difference between two sensor to determine turning speed and direction
+		turn = kp * error + kd * derivative;
 		
-	lastError = error;
+		pAction->speed_L = base_speed + turn;
+		pAction->speed_R = base_speed - turn;
+		
+		lastError = error;
+	}
 	
 } // end Line_Follow
 
@@ -741,18 +736,18 @@ void CBOT_main( void )
 	{
 		// Sensing.
 		// (IR sense happens every 125ms).
-		//IR_sense( &sensor_data, 125 );
+		IR_sense( &sensor_data, 125 );
 		//Photo_sense( &sensor_data, 250 );
 		//Sonar_sense( &sensor_data, 125 );
 		Line_sense( &sensor_data, 10 );
 				
 		// Behaviors.
-		//Cruise( &action );
+		Cruise( &action );
 		//Light_Follow( &action, &sensor_data );
 		//Sonar_Avoid( &action, &sensor_data );
 		//Wall_Follow( &action, &sensor_data );
 		Line_Follow( &action, &sensor_data );
-		//IR_avoid( &action, &sensor_data );
+		IR_avoid( &action, &sensor_data );
 				
 		// Perform the action of highest priority.
 		act( &action );
