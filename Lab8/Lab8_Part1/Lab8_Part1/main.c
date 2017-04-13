@@ -625,30 +625,13 @@ void Line_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors
 	float leftVoltage = pSensors->left_line_voltage;
 	float rightVoltage = pSensors->right_line_voltage - 1.5;
 	
-	//float base_speed = 150;	// worked
-	//--
-	//float base_speed = 260;	// worked 3 complete loops both directions
-	//--
-	//float base_speed = 320;	// Also works
-	//--
 	float base_speed = 350;
-
-		
+	
 	int turn = 0;
-		
-	//float kp = 40;
-	//float kd = 30;
-	//--
-	//float kp = 80;
-	//float kd = 120;
-	//--
-	//float kp = 110;
-	//float kd = 200;
-	//--
+	
 	float kp = 120;
 	float kd = 220;
 
-	
 	// Use difference between two sensor to determine turning speed and direction	
 	float error = leftVoltage - rightVoltage;
 		
@@ -663,11 +646,6 @@ void Line_Follow( volatile MOTOR_ACTION *pAction, volatile SENSOR_DATA *pSensors
 		
 	pAction->speed_L = base_speed + turn;
 	pAction->speed_R = base_speed - turn;
-	
-	//LCD_clear();
-	//LCD_printf( "Left:  %f\n", leftVoltage );
-	//LCD_printf( "Right: %f\n", rightVoltage );
-	//LCD_printf( "Error: %f\n", error );
 		
 	lastError = error;
 	
