@@ -340,15 +340,15 @@ void pixy_process( volatile MOTOR_ACTION *pAction,
 		
 		// "Seven Nation Army" - The White Stripes
 		SPKR_PLAYNOTE SNA_measure_1[] = {
-			{ SPKR_NOTE_E, 3, 0, quarter + eighth, 90 },
-			{ SPKR_NOTE_E, 3, 0, eighth, 90 },
-			{ SPKR_NOTE_G, 3, 0, eighth + sixteenth, 90 },
-			{ SPKR_NOTE_E, 3, 0, eighth + sixteenth, 90 },
-			{ SPKR_NOTE_D, 3, 0, eighth, 90 }			
+			{ SPKR_NOTE_E, 2, 0, quarter + eighth, 90 },
+			{ SPKR_NOTE_E, 2, 0, eighth, 90 },
+			{ SPKR_NOTE_G, 2, 0, eighth + sixteenth, 90 },
+			{ SPKR_NOTE_E, 2, 0, eighth + sixteenth, 90 },
+			{ SPKR_NOTE_D, 2, 0, eighth, 90 }			
 		};
 		SPKR_PLAYNOTE SNA_measure_2[] = {
-			{ SPKR_NOTE_C, 3, 0, half, 90 },
-			{ SPKR_NOTE_B, 2, 0, half, 90 }
+			{ SPKR_NOTE_C, 2, 0, half, 90 },
+			{ SPKR_NOTE_B, 1, 0, half, 90 }
 		};
 		SPKR_MEASURE SNA_measures[] = {
 			{ SNA_measure_1, 5, 1 },
@@ -390,35 +390,35 @@ void pixy_process( volatile MOTOR_ACTION *pAction,
 		
 		// "Smoke on the Water" - Deep Purple
 		SPKR_PLAYNOTE SW_measure_1[] = {
-			{ SPKR_NOTE_D, 3, 0, eighth, 90 },
-			{ SPKR_NOTE_NONE, 3, 0, eighth, 100 },
-			{ SPKR_NOTE_F, 3, 0, eighth, 90 },
-			{ SPKR_NOTE_NONE, 3, 0, eighth, 100 },
-			{ SPKR_NOTE_G, 3, 0, quarter, 90 },
-			{ SPKR_NOTE_NONE, 3, 0, eighth, 100 },
-			{ SPKR_NOTE_D, 3, 0, eighth, 90 }
+			{ SPKR_NOTE_D, 2, 0, eighth, 90 },
+			{ SPKR_NOTE_NONE, 2, 0, eighth, 100 },
+			{ SPKR_NOTE_F, 2, 0, eighth, 90 },
+			{ SPKR_NOTE_NONE, 2, 0, eighth, 100 },
+			{ SPKR_NOTE_G, 2, 0, quarter, 90 },
+			{ SPKR_NOTE_NONE, 2, 0, eighth, 100 },
+			{ SPKR_NOTE_D, 2, 0, eighth, 90 }
 		};
 		SPKR_PLAYNOTE SW_measure_2[] = {
-			{ SPKR_NOTE_NONE, 3, 0, eighth, 100 },
-			{ SPKR_NOTE_F, 3, 0, eighth, 90 },
-			{ SPKR_NOTE_NONE, 3, 0, eighth, 100 },
-			{ SPKR_NOTE_G_S, 3, 0, eighth, 90 },
-			{ SPKR_NOTE_G, 3, 0, quarter, 90 },
-			{ SPKR_NOTE_NONE, 3, 0, quarter, 100 }
+			{ SPKR_NOTE_NONE, 2, 0, eighth, 100 },
+			{ SPKR_NOTE_F, 2, 0, eighth, 90 },
+			{ SPKR_NOTE_NONE, 2, 0, eighth, 100 },
+			{ SPKR_NOTE_G_S, 2, 0, eighth, 90 },
+			{ SPKR_NOTE_G, 2, 0, quarter, 90 },
+			{ SPKR_NOTE_NONE, 2, 0, quarter, 100 }
 		};
 		SPKR_PLAYNOTE SW_measure_3[] = {
-			{ SPKR_NOTE_D, 3, 0, eighth, 90 },
-			{ SPKR_NOTE_NONE, 3, 0, eighth, 100 },
-			{ SPKR_NOTE_F, 3, 0, eighth, 90 },
-			{ SPKR_NOTE_NONE, 3, 0, eighth, 100 },
-			{ SPKR_NOTE_G, 3, 0, quarter, 90 },
-			{ SPKR_NOTE_NONE, 3, 0, eighth, 100 },
-			{ SPKR_NOTE_F, 3, 0, eighth, 90 }
+			{ SPKR_NOTE_D, 2, 0, eighth, 90 },
+			{ SPKR_NOTE_NONE, 2, 0, eighth, 100 },
+			{ SPKR_NOTE_F, 2, 0, eighth, 90 },
+			{ SPKR_NOTE_NONE, 2, 0, eighth, 100 },
+			{ SPKR_NOTE_G, 2, 0, quarter, 90 },
+			{ SPKR_NOTE_NONE, 2, 0, eighth, 100 },
+			{ SPKR_NOTE_F, 2, 0, eighth, 90 }
 		};
 		SPKR_PLAYNOTE SW_measure_4[] = {
-			{ SPKR_NOTE_NONE, 3, 0, eighth, 100 },
-			{ SPKR_NOTE_D, 3, 0, half + eighth, 90 },
-			{ SPKR_NOTE_NONE, 3, 0, quarter, 100 }
+			{ SPKR_NOTE_NONE, 2, 0, eighth, 100 },
+			{ SPKR_NOTE_D, 2, 0, half + eighth, 90 },
+			{ SPKR_NOTE_NONE, 2, 0, quarter, 100 }
 		};
 		SPKR_MEASURE SW_measures[] = {
 			{ SW_measure_1, 7, 1 },
@@ -432,22 +432,43 @@ void pixy_process( volatile MOTOR_ACTION *pAction,
 		
 		switch (pSensors->pixy_data.signum) {
 			case 1:
+				LCD_clear();
+				LCD_printf( "Color Signature #1\n\n" );
+				LCD_printf( "\"Smoke on the Water\"" );
+				// Stop moving to play song
+				STEPPER_stop( STEPPER_BOTH, STEPPER_BRK_OFF );
 				SPKR_play_song( SmokeOnTheWater );
-				//STEPPER_move_stwt( STEPPER_BOTH,
-				//STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF,
-				//STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF);
+				// Turn and resume BBC code
+				STEPPER_move_stwt( STEPPER_BOTH,
+				STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF,
+				STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF);
+				LCD_clear();
 				break;
 			case 2:
+				LCD_clear();
+				LCD_printf( "Color Signature #2\n\n" );
+				LCD_printf( "\"Seven Nation Army\"" );
+				// Stop moving to play song
+				STEPPER_stop( STEPPER_BOTH, STEPPER_BRK_OFF );
 				SPKR_play_song( SevenNationArmy );
-				//STEPPER_move_stwt( STEPPER_BOTH,
-				//STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF,
-				//STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF);
+				// Turn and resume BBC code
+				STEPPER_move_stwt( STEPPER_BOTH,
+				STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF,
+				STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF);
+				LCD_clear();
 				break;
 			case 3:
+				LCD_clear();
+				LCD_printf( "Color Signature #3\n\n" );
+				LCD_printf( "\"U Can't Touch This\"" );
+				// Stop moving to play song
+				STEPPER_stop( STEPPER_BOTH, STEPPER_BRK_OFF );
 				SPKR_play_song( UCantTouchThis );
-				//STEPPER_move_stwt( STEPPER_BOTH,
-				//STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF,
-				//STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF);
+				// Turn and resume BBC code
+				STEPPER_move_stwt( STEPPER_BOTH,
+				STEPPER_REV, DEG_90, 200, 400, STEPPER_BRK_OFF,
+				STEPPER_FWD, DEG_90, 200, 400, STEPPER_BRK_OFF);
+				LCD_clear();
 				break;
 		}
 
@@ -630,14 +651,14 @@ void CBOT_main( void )
         IR_sense( &sensor_data, 125 );
         
         // Behaviors.
-        //cruise( &action );
+        cruise( &action );
 
         // Process pixy data, _if_ there is new data to process.
         pixy_process( &action, &sensor_data );
         
         // Note that 'avoidance' relies on sensor data to determine
         // whether or not 'avoidance' is necessary.
-        //IR_avoid( &action, &sensor_data );
+        IR_avoid( &action, &sensor_data );
         
         // Perform the action of highest priority.
         act( &action );
