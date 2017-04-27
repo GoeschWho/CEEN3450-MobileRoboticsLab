@@ -537,7 +537,7 @@ void CBOT_main( void )
     
         // Sense must always happen first.
         // (IR sense happens every 125ms).
-        IR_sense( &sensor_data, 125 );
+        //IR_sense( &sensor_data, 125 );
         
         // Behaviors.
         cruise( &action );
@@ -547,7 +547,7 @@ void CBOT_main( void )
         
         // Note that 'avoidance' relies on sensor data to determine
         // whether or not 'avoidance' is necessary.
-        IR_avoid( &action, &sensor_data );
+        //IR_avoid( &action, &sensor_data );
         
         // Perform the action of highest priority.
         act( &action );
